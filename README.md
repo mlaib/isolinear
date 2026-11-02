@@ -18,8 +18,20 @@ Every other file still opens, as a summary, its readable strings and its bytes.
 
 ## Install
 
-Download the package for your system from [Releases](https://github.com/mlaib/isolinear/releases):
-`.deb` or `.AppImage` (Linux), `.dmg` (macOS), `.msi` (Windows).
+**Ubuntu, Debian:** add the Isolinear apt repository once; updates then come with `sudo apt upgrade`.
+
+```sh
+curl -fsSL https://mlaib.net/apt/isolinear.gpg \
+  | sudo tee /usr/share/keyrings/isolinear.gpg >/dev/null
+echo "deb [signed-by=/usr/share/keyrings/isolinear.gpg] https://mlaib.net/apt stable main" \
+  | sudo tee /etc/apt/sources.list.d/isolinear.list
+sudo apt update && sudo apt install isolinear
+```
+
+**Other systems**, or a one-off install: download the package from
+[Releases](https://github.com/mlaib/isolinear/releases): `.deb` or `.AppImage` (Linux), `.dmg`
+(macOS), `.msi` (Windows). The macOS and Windows packages are not signed yet; see the release notes
+for the one step each needs.
 
 ## Use
 

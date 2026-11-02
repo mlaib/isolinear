@@ -1,0 +1,8 @@
+Document [4] @0..283
+  Symbol Counter = class [1] @67..122
+    Symbol next [0] @83..120
+  Symbol worker = const [1] @123..213
+    Symbol nested = function [0] @151..190
+  Symbol other = function [0] @215..257
+  Symbol unfinished = function [0] @259..283
+Warning @281..282: expected '}' before the end of the file

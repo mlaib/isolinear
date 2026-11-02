@@ -1,0 +1,52 @@
+!Account
+NChecking
+TBank
+DMain checking account
+^
+!Type:Bank
+D10/03/2026
+T1,500.00
+PACME Payroll
+MSalary October
+LIncome:Salary
+C*
+^
+D10/10/2026
+T-250.00
+N1001
+PLandlord
+LHousing:Rent
+CX
+^
+D10/15/2026
+T-120.00
+PSupermarket
+LGroceries
+SGroceries
+EFood
+$-80.00
+SHousehold
+ECleaning
+$-40.00
+^
+D10/20/2026
+U-60.00
+T-60.00
+PHardware store
+A12 Main Street
+ASpringfield
+SHome:Repairs
+$-35.00
+SHome:Tools
+$-25.00
+^
+!Type:Cat
+NGroceries
+DFood and household
+E
+^
+NIncome:Salary
+DSalary
+I
+T
+^

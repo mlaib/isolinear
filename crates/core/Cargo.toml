@@ -1,0 +1,13 @@
+[package]
+name = "isolinear-core"
+description = "Document model, encodings, size tiers and file access for Isolinear"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+encoding_rs = "0.8"
+memchr = "2"
+serde = { workspace = true }

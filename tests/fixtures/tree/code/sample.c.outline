@@ -1,0 +1,6 @@
+Document [3] @0..241
+  Symbol Packet = struct [1] @67..126
+    Symbol Header = struct [0] @83..116
+  Symbol sum = int [0] @128..217
+  Symbol unfinished = int [0] @218..241
+Warning @239..240: expected '}' before the end of the file

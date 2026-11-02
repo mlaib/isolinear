@@ -1,0 +1,19 @@
+[package]
+name = "isolinear-cli"
+description = "Command-line access to the Isolinear pipeline: detection and views without a window"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "isolinear-cli"
+path = "src/main.rs"
+
+[dependencies]
+isolinear-core = { workspace = true }
+isolinear-formats = { workspace = true }
+isolinear-preview = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }

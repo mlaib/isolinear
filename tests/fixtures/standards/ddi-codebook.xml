@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codeBook xmlns="ddi:codebook:2_5" version="2.5" ID="LU-HEALTH-2025">
+  <docDscr>
+    <citation><titlStmt><titl>Codebook: Luxembourg Health Survey 2025</titl></titlStmt></citation>
+  </docDscr>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>Luxembourg Health Survey 2025</titl>
+        <subTitl>Wave 3</subTitl>
+        <IDNo agency="Example">LHS-2025</IDNo>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="Example Research Institute">Müller, Anna</AuthEnty>
+        <AuthEnty affiliation="University of Example">Rossi, Marco</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="ERI">Example Research Institute</producer>
+        <prodDate date="2026-02-01">February 2026</prodDate>
+      </prodStmt>
+      <distStmt><distrbtr>Example Data Archive</distrbtr><distDate date="2026-03-15"/></distStmt>
+      <verStmt><version date="2026-03-15">1.1</version></verStmt>
+    </citation>
+    <stdyInfo>
+      <sumDscr>
+        <collDate date="2025-03-01" event="start"/>
+        <collDate date="2025-06-30" event="end"/>
+        <nation abbr="LU">Luxembourg</nation>
+        <anlyUnit>Individuals</anlyUnit>
+        <universe>Residents aged 16 and over</universe>
+      </sumDscr>
+    </stdyInfo>
+    <method><dataColl><collMode>Computer-assisted web interview</collMode></dataColl></method>
+  </stdyDscr>
+  <fileDscr ID="F1">
+    <fileTxt>
+      <fileName>lhs2025.sav</fileName>
+      <dimensns><caseQnty>4212</caseQnty><varQnty>3</varQnty></dimensns>
+    </fileTxt>
+  </fileDscr>
+  <dataDscr>
+    <var ID="V1" name="sex" files="F1" intrvl="discrete">
+      <labl>Sex of respondent</labl>
+      <qstn><qstnLit>What is your sex?</qstnLit></qstn>
+      <catgry><catValu>1</catValu><labl>Male</labl><catStat type="freq">2050</catStat></catgry>
+      <catgry><catValu>2</catValu><labl>Female</labl><catStat type="freq">2140</catStat></catgry>
+      <catgry missing="Y"><catValu>9</catValu><labl>No answer</labl><catStat type="freq">22</catStat></catgry>
+      <varFormat type="numeric"/>
+    </var>
+    <var ID="V2" name="age" files="F1" intrvl="contin">
+      <labl>Age in years</labl>
+      <qstn><qstnLit>How old are you?</qstnLit></qstn>
+      <sumStat type="mean">47.3</sumStat>
+      <varFormat type="numeric"/>
+    </var>
+    <var ID="V3" name="health" files="F1" intrvl="discrete">
+      <labl>Self-rated health</labl>
+      <qstn><qstnLit>How is your health in general?</qstnLit></qstn>
+      <catgry><catValu>1</catValu><labl>Very good</labl></catgry>
+      <catgry><catValu>2</catValu><labl>Good</labl></catgry>
+      <catgry><catValu>3</catValu><labl>Fair</labl></catgry>
+      <catgry><catValu>4</catValu><labl>Bad</labl></catgry>
+      <varFormat type="numeric"/>
+    </var>
+  </dataDscr>
+</codeBook>

@@ -1,0 +1,32 @@
+[package]
+name = "isolinear"
+description = "Local-first viewer and editor for structured text and data files"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "isolinear"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+isolinear-core = { workspace = true }
+isolinear-formats = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tauri = { version = "2", features = [] }
+tauri-plugin-clipboard-manager = "2"
+tauri-plugin-dialog = "2"
+
+# Explorer's preview pane: the handler DLL is built from this crate; the app only registers it.
+[target.'cfg(windows)'.dependencies]
+isolinear-winpreview = { path = "../crates/winpreview", default-features = false }
+
+# The GNOME Files previewer (Space on a file) is a D-Bus service.
+[target.'cfg(target_os = "linux")'.dependencies]
+zbus = { version = "5", default-features = false, features = ["blocking-api", "async-io"] }

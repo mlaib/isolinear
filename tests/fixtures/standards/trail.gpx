@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Isolinear fixtures" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Morning loop</name>
+    <desc>Two segments along the Alzette</desc>
+    <author><name>A. Walker</name></author>
+    <time>2026-05-01T07:55:00Z</time>
+  </metadata>
+  <wpt lat="49.6100" lon="6.1300"><ele>300</ele><name>Start</name><sym>Flag</sym></wpt>
+  <wpt lat="49.6200" lon="6.1400"><ele>320</ele><name>Viewpoint</name><desc>Bench &amp; view</desc></wpt>
+  <rte>
+    <name>Planned</name>
+    <rtept lat="49.6100" lon="6.1300"><ele>300</ele></rtept>
+    <rtept lat="49.6200" lon="6.1300"><ele>310</ele></rtept>
+  </rte>
+  <trk>
+    <name>Recorded</name>
+    <trkseg>
+      <trkpt lat="49.6100" lon="6.1300"><ele>300</ele><time>2026-05-01T08:00:00Z</time></trkpt>
+      <trkpt lat="49.6110" lon="6.1300"><ele>305</ele><time>2026-05-01T08:01:00Z</time></trkpt>
+      <trkpt lat="49.6120" lon="6.1300"><ele>302</ele><time>2026-05-01T08:02:00Z</time></trkpt>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="49.6200" lon="6.1300"><ele>310</ele><time>2026-05-01T08:10:00Z</time></trkpt>
+      <trkpt lat="49.6210" lon="6.1300"><ele>318</ele><time>2026-05-01T08:12:30.5Z</time></trkpt>
+    </trkseg>
+  </trk>
+  <trk>
+    <name>No times</name>
+    <trkseg>
+      <trkpt lat="49.60" lon="6.10"/>
+      <trkpt lat="49.60" lon="6.11"/>
+    </trkseg>
+  </trk>
+</gpx>

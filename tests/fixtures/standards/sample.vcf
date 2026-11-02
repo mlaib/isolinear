@@ -1,0 +1,18 @@
+##fileformat=VCFv4.2
+##fileDate=20240115
+##source=isolinear-test
+##reference=GRCh38
+##contig=<ID=chr1,length=248956422>
+##contig=<ID=chr2,length=242193529>
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total depth">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele frequency, per ALT allele">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read depth">
+##FILTER=<ID=q10,Description="Quality below 10">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	S1	S2	S3
+chr1	1000	rs1	A	G	50	PASS	DP=20;AF=0.5	GT:DP	0/1:10	1/1:8	0/0:12
+chr1	2000	.	AT	A	30	PASS	DP=15	GT:DP	0/1:5	0/0:6	./.:0
+chr1	3000	rs3	C	T,G	20	q10	DP=9;AF=0.2,0.1	GT	1/2	0/1	0/0
+chr2	500	.	G	GTT	99	PASS	DP=30	GT	0|1	1|1	0|0
+chr2	800	.	C	<DEL>	10	PASS	SVTYPE=DEL;END=900	GT	0/1	0/0	0/0

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="pat-xml-1"/>
+  <meta>
+    <versionId value="3"/>
+    <lastUpdated value="2026-09-01T12:00:00Z"/>
+    <profile value="http://hl7.org/fhir/R4/StructureDefinition/Patient"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml"><p>Jean Schmit, male, born 1962-07-30</p></div>
+  </text>
+  <contained>
+    <Organization>
+      <id value="org1"/>
+      <name value="Clinique du Parc"/>
+    </Organization>
+  </contained>
+  <identifier>
+    <system value="urn:oid:1.2.442.0.1"/>
+    <value value="1962073012345"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <family value="Schmit"/>
+    <given value="Jean"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+352 621 000 000"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1962-07-30"/>
+  <managingOrganization>
+    <reference value="#org1"/>
+  </managingOrganization>
+  <generalPractitioner>
+    <reference value="Practitioner/gp-9"/>
+    <display value="Dr. Hoffmann"/>
+  </generalPractitioner>
+</Patient>

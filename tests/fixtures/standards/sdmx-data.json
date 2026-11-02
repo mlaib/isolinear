@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "schema": "https://raw.githubusercontent.com/sdmx-twg/sdmx-json/master/data-message/tools/schemas/1.0/sdmx-json-data-schema.json",
+    "id": "IREF-EXR-2026-10",
+    "prepared": "2026-10-30T16:00:00Z",
+    "test": false,
+    "contentLanguages": ["en"],
+    "sender": { "id": "ECB", "name": "European Central Bank" }
+  },
+  "data": {
+    "structure": {
+      "name": "Exchange rates",
+      "links": [{ "urn": "urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ECB:EXR(1.0)", "rel": "dataflow" }],
+      "dimensions": {
+        "dataset": [
+          { "id": "FREQ", "name": "Frequency", "keyPosition": 0, "values": [{ "id": "M", "name": "Monthly" }] }
+        ],
+        "series": [
+          { "id": "CURRENCY", "name": "Currency", "keyPosition": 1, "values": [{ "id": "USD", "name": "US dollar" }, { "id": "CHF", "name": "Swiss franc" }] },
+          { "id": "EXR_TYPE", "name": "Exchange rate type", "keyPosition": 2, "values": [{ "id": "SP00", "name": "Spot" }] }
+        ],
+        "observation": [
+          { "id": "TIME_PERIOD", "name": "Time period", "role": "time", "values": [{ "id": "2026-08" }, { "id": "2026-09" }] }
+        ]
+      },
+      "attributes": {
+        "dataSet": [],
+        "series": [
+          { "id": "UNIT", "name": "Unit", "values": [{ "id": "USD", "name": "US dollar" }, { "id": "CHF", "name": "Swiss franc" }] }
+        ],
+        "observation": [
+          { "id": "OBS_STATUS", "name": "Observation status", "values": [{ "id": "A", "name": "Normal value" }, { "id": "P", "name": "Provisional value" }] }
+        ]
+      }
+    },
+    "dataSets": [
+      {
+        "action": "Information",
+        "series": {
+          "0:0": {
+            "attributes": [0],
+            "observations": { "0": [1.0921, 0], "1": [1.1084, 1] }
+          },
+          "1:0": {
+            "attributes": [1],
+            "observations": { "0": [0.9402, 0], "1": [0.9371, null] }
+          }
+        }
+      }
+    ]
+  }
+}

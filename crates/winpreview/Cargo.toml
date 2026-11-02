@@ -1,0 +1,38 @@
+[package]
+name = "isolinear-winpreview"
+description = "The Explorer preview pane handler: Isolinear's page for a file, in WebView2"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lib]
+name = "isolinear_preview_handler"
+# The DLL Explorer loads; the app links the registration code as Rust.
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["page"]
+# The page itself; off only to type-check the COM code without the readers' C dependencies.
+page = ["dep:isolinear-preview"]
+
+[dependencies]
+isolinear-preview = { workspace = true, optional = true }
+
+[target.'cfg(windows)'.dependencies]
+webview2-com = "0.39"
+windows-core = "0.62"
+windows = { version = "0.62", features = [
+  "Win32_Foundation",
+  "Win32_Graphics_Gdi",
+  "Win32_System_Com",
+  "Win32_System_LibraryLoader",
+  "Win32_System_Ole",
+  "Win32_System_Registry",
+  "Win32_System_SystemServices",
+  "Win32_UI_Shell",
+  "Win32_UI_Input_KeyboardAndMouse",
+  "Win32_UI_Shell_PropertiesSystem",
+  "Win32_UI_WindowsAndMessaging",
+] }

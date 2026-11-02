@@ -1,0 +1,5 @@
+Document [2] @0..192
+  Symbol View = function [1] @59..167
+    Symbol label = const [0] @77..131
+  Symbol unfinished = function [0] @168..192
+Warning @190..191: expected '}' before the end of the file

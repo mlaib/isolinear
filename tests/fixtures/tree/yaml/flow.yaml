@@ -1,0 +1,7 @@
+a: [1, "two", {k: v, "q":x}, []]
+b: {x: 1, y: [a, b], z}
+c:
+- - inner
+  - more
+- k1: v1
+  k2: v2

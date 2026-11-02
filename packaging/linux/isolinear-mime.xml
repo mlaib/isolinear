@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- File types Isolinear opens that shared-mime-info does not define. -->
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-npy">
+    <comment>NumPy array</comment>
+    <magic priority="60"><match type="string" value="\x93NUMPY" offset="0"/></magic>
+    <glob pattern="*.npy"/>
+    <glob pattern="*.npz"/>
+  </mime-type>
+  <mime-type type="application/x-ipynb+json">
+    <comment>Jupyter notebook</comment>
+    <sub-class-of type="application/json"/>
+    <glob pattern="*.ipynb"/>
+  </mime-type>
+  <mime-type type="application/vnd.apache.parquet">
+    <comment>Parquet data</comment>
+    <magic priority="60"><match type="string" value="PAR1" offset="0"/></magic>
+    <glob pattern="*.parquet"/>
+  </mime-type>
+</mime-info>

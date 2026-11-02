@@ -1,0 +1,6 @@
+Document [2] @0..216
+  Symbol Counter = class [1] @69..198
+    Symbol next = def [1] @94..198
+      Symbol nested = def [0] @132..174
+  Symbol unfinished = def [0] @200..215
+Warning @214..215: expected ')' before the end of the file

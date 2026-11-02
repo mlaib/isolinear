@@ -1,0 +1,3 @@
+ok = true
+[server]
+name = "bad\q"

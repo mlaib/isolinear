@@ -1,0 +1,22 @@
+; Isolinear test fixture: a 3D printer program
+;FLAVOR:Marlin
+M140 S60
+M104 S200
+M190 S60
+M109 S200
+G21 ; millimetres
+G90
+M82
+G28 ; home
+G92 E0
+G1 Z0.2 F3000
+G0 X10 Y10 F6000
+G1 X30 Y10 E1.0 F1200
+G1 X30 Y30 E2.0
+G1 X10 Y30 E3.0
+G1 X10 Y10 E4.0
+G0 X20 Y20
+G2 X30 Y20 I5 J0 E5.0 ; clockwise half circle
+M107
+N1 M104 S0*100
+N2 M84*29

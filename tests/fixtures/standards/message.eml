@@ -1,0 +1,54 @@
+Return-Path: <bounce@mail.example.org>
+Received: from mx.example.org (mx.example.org [192.0.2.10])
+	by inbound.example.net with ESMTPS id 4abc; Sun, 1 Nov 2026 10:15:02 +0100
+Received: from laptop.local by mx.example.org with ESMTPSA; Sun, 1 Nov 2026 10:15:00 +0100
+Authentication-Results: inbound.example.net; spf=pass smtp.mailfrom=example.org; dkim=pass header.d=example.org; dmarc=pass
+DKIM-Signature: v=1; a=rsa-sha256; d=example.org; s=sel1; h=from:to:subject; bh=abc=; b=def=
+From: =?utf-8?Q?Jos=C3=A9_Garc=C3=ADa?= <jose@example.org>
+To: "Doe, Ann" <ann@example.net>, bob@example.net
+Cc: team@example.net
+Subject: =?utf-8?B?UmFwcG9ydCBtZW5zdWVs?= =?utf-8?Q?_et_facture_=E2=82=AC?=
+Date: Sun, 1 Nov 2026 10:14:55 +0100
+Message-ID: <20261101101455.42@example.org>
+In-Reply-To: <earlier@example.net>
+References: <first@example.net> <earlier@example.net>
+MIME-Version: 1.0
+X-Mailer: Example Mail 3.1
+Content-Type: multipart/mixed; boundary="outer"
+
+This is a multi-part message in MIME format.
+--outer
+Content-Type: multipart/alternative; boundary="alt"
+
+--alt
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello Ann,
+
+The report & the invoice are attached. Total: 1 234,50 =E2=82=AC. This line is long a=
+nd soft-wrapped.
+--alt
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGh0bWw+PGhlYWQ+PHN0eWxlPnB7Y29sb3I6cmVkfTwvc3R5bGU+PC9oZWFkPjxib2R5PjxwPkhl
+bGxvIEFubiw8L3A+PHA+VGhlIHJlcG9ydCAmYW1wOyB0aGUgaW52b2ljZSBhcmUgYXR0YWNoZWQu
+PGltZyBzcmM9Imh0dHBzOi8vdHJhY2tlci5leGFtcGxlL3AuZ2lmIj48L3A+PC9ib2R5PjwvaHRt
+bD4=
+--alt--
+--outer
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <logo@example.org>
+Content-Disposition: inline; filename="logo.png"
+
+iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAAEElEQVR4nGM4IScHRww4OQD1xwwx
+B+utmQAAAABJRU5ErkJggg==
+--outer
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename*=utf-8''facture%20n%C2%B07.pdf
+
+JVBERi0xLjQKJSBub3QgYSByZWFsIGRvY3VtZW50CiUlRU9GCg==
+--outer--

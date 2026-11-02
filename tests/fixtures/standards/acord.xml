@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ACORD xmlns="http://www.ACORD.org/standards/PC_Surety/ACORD1/xml/">
+  <SignonRq>
+    <SignonPswd><CustId><SPName>com.example</SPName><CustLoginId>agency42</CustLoginId></CustId></SignonPswd>
+    <ClientDt>2026-10-30T09:15:00</ClientDt>
+    <CustLangPref>en-US</CustLangPref>
+    <ClientApp><Org>Example Agency Systems</Org><Name>QuoteDesk</Name><Version>3.2</Version></ClientApp>
+  </SignonRq>
+  <InsuranceSvcRq>
+    <RqUID>7d3f6a2e-1b4c-4f0e-9a51-2c8e5b0d9f11</RqUID>
+    <PersAutoPolicyQuoteInqRq>
+      <RqUID>a6b0d2c4-9e8f-4a1b-8c7d-6e5f4a3b2c1d</RqUID>
+      <TransactionRequestDt>2026-10-30</TransactionRequestDt>
+      <CurCd>USD</CurCd>
+      <Producer>
+        <GeneralPartyInfo><NameInfo><CommlName><CommercialName>Main Street Insurance Agency</CommercialName></CommlName></NameInfo></GeneralPartyInfo>
+        <ProducerInfo><ContractNumber>AG-5521</ContractNumber></ProducerInfo>
+      </Producer>
+      <InsuredOrPrincipal>
+        <GeneralPartyInfo>
+          <NameInfo><PersonName><Surname>Doe</Surname><GivenName>Jane</GivenName></PersonName></NameInfo>
+          <Addr><AddrTypeCd>MailingAddress</AddrTypeCd><Addr1>12 Elm Street</Addr1><City>Springfield</City><StateProvCd>IL</StateProvCd><PostalCode>62701</PostalCode></Addr>
+        </GeneralPartyInfo>
+        <InsuredOrPrincipalInfo>
+          <InsuredOrPrincipalRoleCd>Insured</InsuredOrPrincipalRoleCd>
+          <PersonInfo><BirthDt>1984-04-12</BirthDt></PersonInfo>
+        </InsuredOrPrincipalInfo>
+      </InsuredOrPrincipal>
+      <PersPolicy>
+        <PolicyNumber>PA-2026-001234</PolicyNumber>
+        <LOBCd>AUTOP</LOBCd>
+        <NAICCd>12345</NAICCd>
+        <ControllingStateProvCd>IL</ControllingStateProvCd>
+        <ContractTerm><EffectiveDt>2026-11-15</EffectiveDt><ExpirationDt>2027-05-15</ExpirationDt></ContractTerm>
+        <CurrentTermAmt><Amt>642.00</Amt></CurrentTermAmt>
+        <Loss>
+          <LossDt>2024-02-03</LossDt>
+          <LossCauseCd>Collision</LossCauseCd>
+          <ClaimStatusCd>Closed</ClaimStatusCd>
+          <TotalPaidAmt><Amt>3150.00</Amt></TotalPaidAmt>
+        </Loss>
+      </PersPolicy>
+      <PersAutoLineBusiness>
+        <LOBCd>AUTOP</LOBCd>
+        <PersVeh id="V1">
+          <Manufacturer>Toyota</Manufacturer><Model>Corolla</Model><ModelYear>2022</ModelYear>
+          <VehIdentificationNumber>2T1BURHE0NC000001</VehIdentificationNumber>
+          <Coverage>
+            <CoverageCd>BI</CoverageCd>
+            <CoverageDesc>Bodily injury liability</CoverageDesc>
+            <Limit><FormatCurrencyAmt><Amt>100000</Amt></FormatCurrencyAmt><LimitAppliesToCd>PerPerson</LimitAppliesToCd></Limit>
+            <Limit><FormatCurrencyAmt><Amt>300000</Amt></FormatCurrencyAmt><LimitAppliesToCd>PerAcc</LimitAppliesToCd></Limit>
+            <CurrentTermAmt><Amt>210.00</Amt></CurrentTermAmt>
+          </Coverage>
+          <Coverage>
+            <CoverageCd>COLL</CoverageCd>
+            <CoverageDesc>Collision</CoverageDesc>
+            <Deductible><FormatCurrencyAmt><Amt>500</Amt></FormatCurrencyAmt><DeductibleTypeCd>FL</DeductibleTypeCd></Deductible>
+            <CurrentTermAmt><Amt>298.00</Amt></CurrentTermAmt>
+          </Coverage>
+          <Coverage>
+            <CoverageCd>COMP</CoverageCd>
+            <CoverageDesc>Comprehensive</CoverageDesc>
+            <Deductible><FormatCurrencyAmt><Amt>250</Amt></FormatCurrencyAmt><DeductibleTypeCd>FL</DeductibleTypeCd></Deductible>
+            <CurrentTermAmt><Amt>134.00</Amt></CurrentTermAmt>
+          </Coverage>
+        </PersVeh>
+      </PersAutoLineBusiness>
+    </PersAutoPolicyQuoteInqRq>
+  </InsuranceSvcRq>
+</ACORD>

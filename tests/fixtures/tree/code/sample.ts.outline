@@ -1,0 +1,8 @@
+Document [4] @0..311
+  Symbol Item = interface [0] @58..91
+  Symbol Counter = class [1] @92..163
+    Symbol next [0] @108..161
+  Symbol worker = const [1] @164..285
+    Symbol nested = function [0] @223..262
+  Symbol unfinished = function [0] @287..311
+Warning @309..310: expected '}' before the end of the file

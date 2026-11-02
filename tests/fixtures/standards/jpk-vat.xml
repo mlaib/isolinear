@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JPK xmlns="http://jpk.mf.gov.pl/wzor/2022/02/17/02171/">
+  <Naglowek><KodFormularza kodSystemowy="JPK_V7M (2)" wersjaSchemy="1-0E">JPK_VAT</KodFormularza><WariantFormularza>2</WariantFormularza>
+    <DataWytworzeniaJPK>2026-02-20T10:00:00</DataWytworzeniaJPK><NazwaSystemu>Ksiegowosc</NazwaSystemu><Rok>2026</Rok><Miesiac>1</Miesiac></Naglowek>
+  <Podmiot1><OsobaNiefizyczna><NIP>5250000001</NIP><PelnaNazwa>Przyklad Sp. z o.o.</PelnaNazwa></OsobaNiefizyczna></Podmiot1>
+  <Ewidencja>
+    <SprzedazWiersz><LpSprzedazy>1</LpSprzedazy><NrKontrahenta>5260000002</NrKontrahenta><NazwaKontrahenta>Klient SA</NazwaKontrahenta><DowodSprzedazy>FV/1/2026</DowodSprzedazy><DataWystawienia>2026-01-10</DataWystawienia><K_19>1000.00</K_19><K_20>230.00</K_20></SprzedazWiersz>
+    <SprzedazCtrl><LiczbaWierszySprzedazy>2</LiczbaWierszySprzedazy><PodatekNalezny>230.00</PodatekNalezny></SprzedazCtrl>
+  </Ewidencja>
+</JPK>

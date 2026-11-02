@@ -1,0 +1,38 @@
+From ann@example.net Sat Oct 31 09:00:00 2026
+From: Ann Doe <ann@example.net>
+To: jose@example.org
+Subject: Planning
+Date: Sat, 31 Oct 2026 09:00:00 +0000
+Message-ID: <a1@example.net>
+
+Shall we meet on Monday?
+>From the minutes: nothing new.
+
+From jose@example.org Sun Nov  1 10:00:00 2026
+From: =?utf-8?Q?Jos=C3=A9?= <jose@example.org>
+To: ann@example.net
+Subject: Re: Planning
+Date: Sun, 1 Nov 2026 10:00:00 +0100
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="b"
+
+--b
+Content-Type: text/plain
+
+Yes, see the agenda.
+--b
+Content-Type: text/csv; name="agenda.csv"
+Content-Disposition: attachment; filename="agenda.csv"
+
+time,topic
+10:00,budget
+--b--
+
+From ann@example.net Mon Nov  2 08:30:00 2026
+From: Ann Doe <ann@example.net>
+To: jose@example.org
+Subject: Thanks
+Date: Mon, 2 Nov 2026 08:30:00 +0000
+
+See you.
+

@@ -1,0 +1,5 @@
+Document [2] @0..110
+  Symbol Tools = package [1] @42..92
+    Symbol next_value = sub [0] @58..90
+  Symbol unfinished = sub [0] @93..110
+Warning @108..109: expected '}' before the end of the file

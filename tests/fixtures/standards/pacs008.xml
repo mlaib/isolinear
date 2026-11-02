@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.08">
+  <FIToFICstmrCdtTrf>
+    <GrpHdr>
+      <MsgId>PACS-77</MsgId>
+      <CreDtTm>2026-11-01T11:00:00Z</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <TtlIntrBkSttlmAmt Ccy="EUR">1000.00</TtlIntrBkSttlmAmt>
+      <IntrBkSttlmDt>2026-11-03</IntrBkSttlmDt>
+      <SttlmInf><SttlmMtd>CLRG</SttlmMtd></SttlmInf>
+      <InstgAgt><FinInstnId><BICFI>BCEELULL</BICFI></FinInstnId></InstgAgt>
+      <InstdAgt><FinInstnId><BICFI>DEUTDEFF</BICFI></FinInstnId></InstdAgt>
+    </GrpHdr>
+    <CdtTrfTxInf>
+      <PmtId><InstrId>I-1</InstrId><EndToEndId>E2E-1</EndToEndId><TxId>TX-1</TxId><UETR>eb6305c9-1f7f-49de-aed0-16487c27b42d</UETR></PmtId>
+      <IntrBkSttlmAmt Ccy="EUR">1000.00</IntrBkSttlmAmt>
+      <ChrgBr>SLEV</ChrgBr>
+      <Dbtr><Nm>Example Research S.A.</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>LU280019400644750000</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>BCEELULL</BICFI></FinInstnId></DbtrAgt>
+      <CdtrAgt><FinInstnId><BICFI>DEUTDEFF</BICFI></FinInstnId></CdtrAgt>
+      <Cdtr><Nm>Supplier One</Nm></Cdtr>
+      <CdtrAcct><Id><IBAN>DE89370400440532013000</IBAN></Id></CdtrAcct>
+    </CdtTrfTxInf>
+  </FIToFICstmrCdtTrf>
+</Document>

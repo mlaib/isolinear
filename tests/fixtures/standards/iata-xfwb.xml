@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:Waybill xmlns:rsm="iata:waybill:1"
+             xmlns:ram="iata:datamodel:3"
+             xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">
+  <rsm:MessageHeaderDocument>
+    <ram:ID>176-12345675</ram:ID>
+    <ram:Name>Master Air Waybill</ram:Name>
+    <ram:TypeCode>740</ram:TypeCode>
+    <ram:IssueDateTime>2026-10-30T14:05:00</ram:IssueDateTime>
+    <ram:PurposeCode>Creation</ram:PurposeCode>
+    <ram:VersionID>3.00</ram:VersionID>
+    <ram:SenderParty><ram:PrimaryID schemeID="C">REUAGT89LUXFFXXX</ram:PrimaryID></ram:SenderParty>
+    <ram:RecipientParty><ram:PrimaryID schemeID="C">REUAIR08EKXXXXXX</ram:PrimaryID></ram:RecipientParty>
+  </rsm:MessageHeaderDocument>
+  <rsm:BusinessHeaderDocument>
+    <ram:ID>176-12345675</ram:ID>
+    <ram:SignatoryConsignorAuthentication><ram:Signatory>J SMITH</ram:Signatory></ram:SignatoryConsignorAuthentication>
+    <ram:SignatoryCarrierAuthentication>
+      <ram:ActualDateTime>2026-10-30T14:00:00</ram:ActualDateTime>
+      <ram:Signatory>CARGO AGENT LUX</ram:Signatory>
+      <ram:IssueAuthenticationLocation><ram:Name>LUXEMBOURG</ram:Name></ram:IssueAuthenticationLocation>
+    </ram:SignatoryCarrierAuthentication>
+  </rsm:BusinessHeaderDocument>
+  <rsm:MasterConsignment>
+    <ram:IncludedTareGrossWeightMeasure unitCode="KGM">412.5</ram:IncludedTareGrossWeightMeasure>
+    <ram:GrossVolumeMeasure unitCode="MTQ">2.1</ram:GrossVolumeMeasure>
+    <ram:TotalPieceQuantity>5</ram:TotalPieceQuantity>
+    <ram:ConsignorParty>
+      <ram:Name>Example Research S.A.</ram:Name>
+      <ram:PostalStructuredAddress>
+        <ram:StreetName>5 avenue des Hauts-Fourneaux</ram:StreetName>
+        <ram:CityName>Esch-sur-Alzette</ram:CityName>
+        <ram:CountryID>LU</ram:CountryID>
+      </ram:PostalStructuredAddress>
+    </ram:ConsignorParty>
+    <ram:ConsigneeParty>
+      <ram:Name>Desert Labs FZ LLC</ram:Name>
+      <ram:PostalStructuredAddress>
+        <ram:StreetName>Building 7, Dubai Science Park</ram:StreetName>
+        <ram:CityName>Dubai</ram:CityName>
+        <ram:CountryID>AE</ram:CountryID>
+      </ram:PostalStructuredAddress>
+    </ram:ConsigneeParty>
+    <ram:FreightForwarderParty><ram:Name>Cargo Agent Lux S.à r.l.</ram:Name></ram:FreightForwarderParty>
+    <ram:OriginLocation><ram:ID>LUX</ram:ID><ram:Name>Luxembourg</ram:Name></ram:OriginLocation>
+    <ram:FinalDestinationLocation><ram:ID>DXB</ram:ID><ram:Name>Dubai</ram:Name></ram:FinalDestinationLocation>
+    <ram:SpecifiedLogisticsTransportMovement>
+      <ram:StageCode>Main-Carriage</ram:StageCode>
+      <ram:ModeCode>4</ram:ModeCode>
+      <ram:ID>EK9937</ram:ID>
+      <ram:SequenceNumeric>1</ram:SequenceNumeric>
+      <ram:UsedLogisticsTransportMeans><ram:Name>EK</ram:Name></ram:UsedLogisticsTransportMeans>
+      <ram:ArrivalEvent>
+        <ram:ScheduledOccurrenceDateTime>2026-11-01T06:30:00</ram:ScheduledOccurrenceDateTime>
+        <ram:OccurrenceArrivalLocation><ram:ID>DXB</ram:ID></ram:OccurrenceArrivalLocation>
+      </ram:ArrivalEvent>
+      <ram:DepartureEvent>
+        <ram:ScheduledOccurrenceDateTime>2026-10-31T21:40:00</ram:ScheduledOccurrenceDateTime>
+        <ram:OccurrenceDepartureLocation><ram:ID>LUX</ram:ID></ram:OccurrenceDepartureLocation>
+      </ram:DepartureEvent>
+    </ram:SpecifiedLogisticsTransportMovement>
+    <ram:HandlingSPHInstructions><ram:DescriptionCode>EAP</ram:DescriptionCode></ram:HandlingSPHInstructions>
+    <ram:IncludedMasterConsignmentItem>
+      <ram:SequenceNumeric>1</ram:SequenceNumeric>
+      <ram:GrossWeightMeasure unitCode="KGM">300.0</ram:GrossWeightMeasure>
+      <ram:PieceQuantity>3</ram:PieceQuantity>
+      <ram:NatureIdentificationTransportCargo><ram:Identification>LAB EQUIPMENT</ram:Identification></ram:NatureIdentificationTransportCargo>
+      <ram:ApplicableFreightRateServiceCharge><ram:CategoryCode>Q</ram:CategoryCode><ram:AppliedAmount>1350.00</ram:AppliedAmount></ram:ApplicableFreightRateServiceCharge>
+    </ram:IncludedMasterConsignmentItem>
+    <ram:IncludedMasterConsignmentItem>
+      <ram:SequenceNumeric>2</ram:SequenceNumeric>
+      <ram:GrossWeightMeasure unitCode="KGM">112.5</ram:GrossWeightMeasure>
+      <ram:PieceQuantity>2</ram:PieceQuantity>
+      <ram:NatureIdentificationTransportCargo><ram:Identification>CONSUMABLES</ram:Identification></ram:NatureIdentificationTransportCargo>
+    </ram:IncludedMasterConsignmentItem>
+  </rsm:MasterConsignment>
+</rsm:Waybill>

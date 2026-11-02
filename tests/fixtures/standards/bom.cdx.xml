@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.4" serialNumber="urn:uuid:1b4e28ba-2fa1-11d2-883f-0016d3cca427" version="2">
+  <metadata>
+    <timestamp>2026-10-29T08:30:00Z</timestamp>
+    <tools>
+      <tool>
+        <vendor>CycloneDX</vendor>
+        <name>cyclonedx-maven-plugin</name>
+        <version>2.7.9</version>
+      </tool>
+    </tools>
+    <component type="application" bom-ref="pkg:maven/lu.example/ledger@1.0.0">
+      <group>lu.example</group>
+      <name>ledger</name>
+      <version>1.0.0</version>
+      <purl>pkg:maven/lu.example/ledger@1.0.0</purl>
+    </component>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.15.2">
+      <group>com.fasterxml.jackson.core</group>
+      <name>jackson-databind</name>
+      <version>2.15.2</version>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-1">a6e6d0d8a6b1c5a3e8d4f8b0a1c2d3e4f5a6b7c8</hash>
+        <hash alg="SHA-256">0f4c8e1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6</hash>
+      </hashes>
+      <licenses>
+        <license><id>Apache-2.0</id></license>
+      </licenses>
+      <purl>pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.15.2</purl>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.slf4j/slf4j-api@2.0.9">
+      <group>org.slf4j</group>
+      <name>slf4j-api</name>
+      <version>2.0.9</version>
+      <licenses>
+        <expression>MIT</expression>
+      </licenses>
+      <purl>pkg:maven/org.slf4j/slf4j-api@2.0.9</purl>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="pkg:maven/lu.example/ledger@1.0.0">
+      <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.15.2"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9"/>
+    </dependency>
+    <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.15.2">
+      <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-core@2.15.2"/>
+    </dependency>
+  </dependencies>
+</bom>

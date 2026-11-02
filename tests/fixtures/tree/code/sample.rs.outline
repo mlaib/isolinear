@@ -1,0 +1,7 @@
+Document [2] @0..216
+  Symbol tools = mod [2] @64..197
+    Symbol Counter = struct [0] @76..111
+    Symbol impl Display for Counter = impl [1] @112..195
+      Symbol fmt = fn [0] @143..189
+  Symbol unfinished = fn [0] @198..216
+Warning @214..215: expected '}' before the end of the file

@@ -1,0 +1,5 @@
+Document [2] @0..143
+  Symbol Counter = struct [1] @48..122
+    Symbol next = func [0] @65..120
+  Symbol unfinished = func [0] @123..143
+Warning @141..142: expected '}' before the end of the file

@@ -1,0 +1,6 @@
+Document [4] @0..309
+  Symbol app.items = TABLE [0] @71..119
+  Symbol app.labels = VIEW [0] @120..185
+  Symbol next_value = FUNCTION [0] @186..282
+  Symbol unfinished = TABLE [0] @283..309
+Warning @307..308: expected ')' before the end of the file

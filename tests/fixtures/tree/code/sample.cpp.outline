@@ -1,0 +1,6 @@
+Document [2] @0..187
+  Symbol tools = namespace [1] @69..166
+    Symbol Counter = class [1] @87..163
+      Symbol next = int [0] @119..157
+  Symbol unfinished = void [0] @167..187
+Warning @185..186: expected '}' before the end of the file

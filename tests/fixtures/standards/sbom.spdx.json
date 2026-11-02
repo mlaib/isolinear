@@ -1,0 +1,61 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "acme-cli-1.3.0",
+  "documentNamespace": "https://spdx.example.org/acme-cli-1.3.0-7f0c1d2e",
+  "creationInfo": {
+    "created": "2026-10-29T09:00:00Z",
+    "creators": ["Tool: syft-1.14.0", "Organization: Acme Software"],
+    "licenseListVersion": "3.24"
+  },
+  "documentDescribes": ["SPDXRef-Package-acme-cli"],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-acme-cli",
+      "name": "acme-cli",
+      "versionInfo": "1.3.0",
+      "supplier": "Organization: Acme Software",
+      "downloadLocation": "https://git.example.org/acme/cli/archive/v1.3.0.tar.gz",
+      "filesAnalyzed": true,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "checksums": [
+        { "algorithm": "SHA256", "checksumValue": "d2a84f4b8b650937ec8f73cd8be2c74add5a911ba64df27458ed8229da804a26" }
+      ],
+      "externalRefs": [
+        { "referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:golang/git.example.org/acme/cli@v1.3.0" }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-cobra",
+      "name": "github.com/spf13/cobra",
+      "versionInfo": "v1.8.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "externalRefs": [
+        { "referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:golang/github.com/spf13/cobra@v1.8.0" },
+        { "referenceCategory": "SECURITY", "referenceType": "cpe23Type", "referenceLocator": "cpe:2.3:a:spf13:cobra:1.8.0:*:*:*:*:*:*:*" }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./cmd/acme/main.go",
+      "SPDXID": "SPDXRef-File-main",
+      "checksums": [
+        { "algorithm": "SHA1", "checksumValue": "85ed0817af83a24ad8da68c2b5094de69833983c" }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "licenseInfoInFiles": ["Apache-2.0"]
+    }
+  ],
+  "relationships": [
+    { "spdxElementId": "SPDXRef-DOCUMENT", "relationshipType": "DESCRIBES", "relatedSpdxElement": "SPDXRef-Package-acme-cli" },
+    { "spdxElementId": "SPDXRef-Package-acme-cli", "relationshipType": "DEPENDS_ON", "relatedSpdxElement": "SPDXRef-Package-cobra" },
+    { "spdxElementId": "SPDXRef-Package-acme-cli", "relationshipType": "CONTAINS", "relatedSpdxElement": "SPDXRef-File-main" }
+  ]
+}

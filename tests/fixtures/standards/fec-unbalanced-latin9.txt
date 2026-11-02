@@ -1,0 +1,6 @@
+JournalCode	JournalLib	EcritureNum	EcritureDate	CompteNum	CompteLib	CompAuxNum	CompAuxLib	PieceRef	PieceDate	EcritureLib	Debit	Credit	EcritureLet	DateLet	ValidDate	Montantdevise	Idevise
+OD	Opérations diverses	1	20251130	625100	Voyages et déplacements			ND-11	20251130	Note de frais 50 ¤	50,00				20251201		
+OD	Opérations diverses	1	20251130	421000	Personnel - rémunérations dues			ND-11	20251130	Note de frais 50 ¤		45,00			20251201		
+OD	Opérations diverses	2	20251130	627000	Services bancaires			REL-11	20251130	Frais	10,00				20251201		
+OD	Opérations diverses	2	20251130	512000	Banque			REL-11	20251130	Frais		10,00			20251201		
+OD	Opérations diverses	3	2025-11-30	512000	Banque			X	20251130	Ligne coupée

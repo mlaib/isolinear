@@ -1,0 +1,5 @@
+Document [2] @0..124
+  Symbol Counter = class [1] @46..104
+    Symbol next = def [0] @62..102
+  Symbol unfinished = def [0] @105..124
+Warning @122..123: expected '}' before the end of the file

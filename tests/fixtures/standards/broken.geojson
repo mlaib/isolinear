@@ -1,0 +1,10 @@
+{"type": "FeatureCollection",
+ "crs": {"type": "name", "properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}},
+ "features": [
+  {"type": "Feature", "properties": {"name": "Open ring"},
+   "geometry": {"type": "Polygon", "coordinates": [[[0, 0], [1, 0], [1, 1], [0, 1]]]}},
+  {"type": "Feature", "properties": {"name": "Fine"},
+   "geometry": {"type": "Point", "coordinates": [1, 1]}},
+  {"type": "Feature", "properties": {"name": "Text position"},
+   "geometry": {"type": "LineString", "coordinates": [["a", "b"], [2, 2]]}}
+ ]}

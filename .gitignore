@@ -1,0 +1,8 @@
+/target/
+node_modules/
+/ui/dist/
+/src-tauri/gen/
+/.claude/
+*.log
+/docs/
+!/tests/fixtures/**/*.log

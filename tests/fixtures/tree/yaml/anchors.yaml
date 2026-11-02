@@ -1,0 +1,6 @@
+base: &base !!map {x: 1}
+other: *base
+tagged: &a !!str 12
+list: &l
+  - 1
+ref: [*base, *l]

@@ -1,0 +1,6 @@
+Document [2] @0..132
+  Symbol Tools = module [1] @43..116
+    Symbol Counter = class [1] @56..112
+      Symbol next_value = def [0] @72..106
+  Symbol unfinished = def [0] @117..131
+Warning @121..131: expected 'end' before the end of the file

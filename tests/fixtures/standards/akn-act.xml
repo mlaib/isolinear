@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <act name="act" contains="singleVersion">
+    <meta>
+      <identification source="#example">
+        <FRBRWork>
+          <FRBRthis value="/akn/lu/act/2026-03-12/17/!main"/>
+          <FRBRuri value="/akn/lu/act/2026-03-12/17"/>
+          <FRBRdate date="2026-03-12" name="enactment"/>
+          <FRBRauthor href="#parliament"/>
+          <FRBRcountry value="lu"/>
+          <FRBRnumber value="17"/>
+          <FRBRname value="Open Research Data Act"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/lu/act/2026-03-12/17/eng@2026-04-01/!main"/>
+          <FRBRuri value="/akn/lu/act/2026-03-12/17/eng@2026-04-01"/>
+          <FRBRdate date="2026-04-01" name="publication"/>
+          <FRBRauthor href="#parliament"/>
+          <FRBRlanguage language="eng"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/lu/act/2026-03-12/17/eng@2026-04-01/!main.xml"/>
+          <FRBRuri value="/akn/lu/act/2026-03-12/17/eng@2026-04-01/.akn"/>
+          <FRBRdate date="2026-04-02" name="markup"/>
+          <FRBRauthor href="#example"/>
+        </FRBRManifestation>
+      </identification>
+      <lifecycle source="#example">
+        <eventRef eId="e1" date="2026-03-12" source="#ro1" type="generation"/>
+        <eventRef eId="e2" date="2026-04-01" source="#ro2" type="amendment"/>
+      </lifecycle>
+      <analysis source="#example">
+        <passiveModifications>
+          <textualMod type="substitution" eId="pmod1">
+            <source href="#ro2"/>
+            <destination href="#art_2__para_1"/>
+            <force period="#e2"/>
+          </textualMod>
+        </passiveModifications>
+      </analysis>
+      <references source="#example">
+        <original eId="ro1" href="/akn/lu/act/2026-03-12/17/eng@2026-03-12" showAs="Original"/>
+        <passiveRef eId="ro2" href="/akn/lu/act/2026-03-30/21" showAs="Amending act 21/2026"/>
+        <TLCOrganization eId="parliament" href="/ontology/organization/lu/parliament" showAs="Chamber of Deputies"/>
+        <TLCOrganization eId="example" href="/ontology/organization/example" showAs="Example markup service"/>
+      </references>
+    </meta>
+    <preface>
+      <p class="title"><docTitle>Open Research Data Act</docTitle></p>
+      <p><docNumber>No. 17 of 2026</docNumber> of <docDate date="2026-03-12">12 March 2026</docDate></p>
+    </preface>
+    <body>
+      <chapter eId="chp_1">
+        <num>Chapter I</num>
+        <heading>General provisions</heading>
+        <article eId="art_1">
+          <num>Article 1</num>
+          <heading>Purpose</heading>
+          <paragraph eId="art_1__para_1">
+            <num>1.</num>
+            <content><p>This Act promotes open access to publicly funded research data.</p></content>
+          </paragraph>
+        </article>
+        <article eId="art_2">
+          <num>Article 2</num>
+          <heading>Definitions</heading>
+          <paragraph eId="art_2__para_1">
+            <num>1.</num>
+            <content><p>“Research data” has the meaning given in <ref href="/akn/eu/directive/2019-06-20/1024">Directive (EU) 2019/1024</ref>.</p></content>
+          </paragraph>
+          <paragraph eId="art_2__para_2">
+            <num>2.</num>
+            <content><p>“Repository” means a service that preserves data.</p></content>
+          </paragraph>
+        </article>
+      </chapter>
+      <chapter eId="chp_2">
+        <num>Chapter II</num>
+        <heading>Final provisions</heading>
+        <article eId="art_3">
+          <num>Article 3</num>
+          <heading>Entry into force</heading>
+          <paragraph eId="art_3__para_1">
+            <content><p>This Act enters into force on the day after its publication.</p></content>
+          </paragraph>
+        </article>
+      </chapter>
+    </body>
+  </act>
+</akomaNtoso>

@@ -1,0 +1,6 @@
+<?xml version='1.0'?>
+<r xmlns='urn:default' xmlns:p="urn:p">
+  <p:a id='1' name="x &amp; y">café 你好</p:a>
+  <p:nested xmlns:p='urn:inner'><p:child/></p:nested>
+  <p:empty/>
+</r>

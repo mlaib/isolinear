@@ -1,0 +1,19 @@
+lit: |
+  line one
+    indented
+  line three
+
+fold: >-
+  a
+  b
+
+  c
+plain: first
+  second
+
+  third
+dq: "x\ty
+  z"
+explicit: |2-
+  literal
+next: 1

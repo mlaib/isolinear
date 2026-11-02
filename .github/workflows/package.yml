@@ -1,0 +1,121 @@
+name: Package
+# Installable packages: on version tags, or by hand from the Actions tab.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      windows:
+        description: "Also build the Windows installer"
+        type: boolean
+        default: false
+      linux_x64:
+        description: "Also build the x86-64 Linux packages (.deb and AppImage)"
+        type: boolean
+        default: false
+permissions:
+  contents: read
+env:
+  CARGO_TERM_COLOR: always
+jobs:
+  unix:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: linux
+            bundles: deb
+            output: target/release/bundle/deb/*.deb
+          - os: macos
+            bundles: app
+            output: target/release/bundle/dmg/*.dmg
+    name: package (${{ matrix.os }})
+    # Runners come from the repository's variables (LINUX_RUNNER, MACOS_RUNNER); without them the
+    # jobs run on GitHub's runners, and only when HOSTED_CI is "true".
+    if: ${{ vars.LINUX_RUNNER != '' || vars.HOSTED_CI == 'true' }}
+    runs-on: ${{ matrix.os == 'linux' && (vars.LINUX_RUNNER || 'ubuntu-24.04') || (vars.MACOS_RUNNER || 'macos-14') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Linux build dependencies
+        if: matrix.os == 'linux'
+        run: |
+          PKGS="libwebkit2gtk-4.1-dev libgtk-3-dev libsoup-3.0-dev libayatana-appindicator3-dev librsvg2-dev patchelf build-essential libssl-dev pkg-config"
+          dpkg -s $PKGS >/dev/null 2>&1 || { sudo apt-get update && sudo apt-get install -y $PKGS; }
+      - name: Rust toolchain on the path
+        run: echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+      - run: tools/ci-target-cache.sh
+        if: runner.environment != 'github-hosted'
+      - run: npm ci
+      - run: npm run tauri build -- --bundles ${{ matrix.bundles }}
+      - name: Quick Look extension and disk image (macOS)
+        if: matrix.os == 'macos'
+        run: packaging/macos/quicklook/build.sh
+      - name: No network, no other program (Linux)
+        if: matrix.os == 'linux'
+        run: |
+          dpkg -s strace xvfb >/dev/null 2>&1 || { sudo apt-get update && sudo apt-get install -y strace xvfb; }
+          xvfb-run -a -s "-screen 0 1280x840x24" tools/linux-sandbox-check.sh
+      - name: Packages and checksums
+        shell: bash
+        run: |
+          rm -rf dist && mkdir dist
+          cp ${{ matrix.output }} dist/
+          cd dist
+          for f in *; do shasum -a 256 "$f" > "$f.sha256"; done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: isolinear-${{ matrix.os }}
+          path: dist/*
+          retention-days: 7
+
+  windows:
+    if: github.event_name == 'workflow_dispatch' && inputs.windows
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: rustup show
+      - run: npm ci
+      # The Explorer preview handler: tested, then built so that the installer carries it.
+      - run: cargo test -p isolinear-winpreview -p isolinear-preview
+      - run: cargo build --release -p isolinear-winpreview
+      - run: npm run tauri build -- --bundles msi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: isolinear-windows
+          path: target/release/bundle/msi/*.msi
+          retention-days: 7
+
+  linux-x64:
+    if: github.event_name == 'workflow_dispatch' && inputs.linux_x64
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libgtk-3-dev librsvg2-dev libayatana-appindicator3-dev patchelf file
+      - run: rustup show
+      - run: npm ci
+      - run: npm run tauri build -- --bundles deb,appimage
+        env:
+          # The AppImage tools run unpacked, without FUSE.
+          APPIMAGE_EXTRACT_AND_RUN: "1"
+      - name: Packages and checksums
+        run: |
+          mkdir dist
+          cp target/release/bundle/deb/*.deb target/release/bundle/appimage/*.AppImage dist/
+          cd dist
+          for f in *; do sha256sum "$f" > "$f.sha256"; done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: isolinear-linux-x64
+          path: dist/*
+          retention-days: 7

@@ -1,0 +1,217 @@
+:root {
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --bg: #ffffff;
+  --fg: #1f2328;
+  --fg-muted: #656d76;
+  --bar: #f6f8fa;
+  --line: #d0d7de;
+  --chip: #e7ebef;
+  --danger: #b42318;
+  --danger-bg: #fde8e6;
+  --warn: #9a6700;
+  --warn-bg: #fff4d6;
+  --accent: #0969da;
+  --selection: #b6d7ff;
+  --active-line: rgb(234 238 242 / 0.55);
+  --node: rgb(9 105 218 / 0.08);
+  --syn-keyword: #cf222e;
+  --syn-string: #0a3069;
+  --syn-number: #0550ae;
+  --syn-comment: #6e7781;
+  --syn-property: #953800;
+  --syn-function: #8250df;
+  --syn-type: #953800;
+  --syn-tag: #116329;
+  --syn-attribute: #0550ae;
+  --syn-heading: #0550ae;
+  --syn-link: #0969da;
+  --hover: rgb(208 215 222 / 0.32);
+  --active: #ffffff;
+  --raised: #ffffff;
+  --shadow-sm: 0 1px 2px rgb(31 35 40 / 0.12);
+  --shadow-lg: 0 12px 32px rgb(31 35 40 / 0.18), 0 1px 3px rgb(31 35 40 / 0.12);
+  --accent-soft: rgb(9 105 218 / 0.1);
+  --ok: #1a7f37;
+  --ok-bg: #dafbe1;
+  --radius: 6px;
+  color-scheme: light;
+}
+
+/* Dark: when the system asks for it, unless Light is chosen in the app, or when Dark is. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --fg-muted: #8d96a0;
+    --bar: #161b22;
+    --line: #30363d;
+    --chip: #21262d;
+    --danger: #ff7b72;
+    --danger-bg: #3a1d1b;
+    --warn: #d29922;
+    --warn-bg: #3a2e12;
+    --accent: #2f81f7;
+    --selection: #264f78;
+    --active-line: rgb(110 118 129 / 0.12);
+    --node: rgb(56 139 253 / 0.12);
+    --syn-keyword: #ff7b72;
+    --syn-string: #a5d6ff;
+    --syn-number: #79c0ff;
+    --syn-comment: #8b949e;
+    --syn-property: #ffa657;
+    --syn-function: #d2a8ff;
+    --syn-type: #ffa657;
+    --syn-tag: #7ee787;
+    --syn-attribute: #79c0ff;
+    --syn-heading: #79c0ff;
+    --syn-link: #58a6ff;
+    color-scheme: dark;
+    --hover: rgb(177 186 196 / 0.1);
+    --active: #2d333b;
+    --raised: #1c2128;
+    --shadow-sm: 0 1px 2px rgb(1 4 9 / 0.6);
+    --shadow-lg: 0 12px 32px rgb(1 4 9 / 0.65), 0 1px 3px rgb(1 4 9 / 0.5);
+    --accent-soft: rgb(56 139 253 / 0.15);
+    --ok: #3fb950;
+    --ok-bg: rgb(46 160 67 / 0.15);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0d1117;
+  --fg: #e6edf3;
+  --fg-muted: #8d96a0;
+  --bar: #161b22;
+  --line: #30363d;
+  --chip: #21262d;
+  --danger: #ff7b72;
+  --danger-bg: #3a1d1b;
+  --warn: #d29922;
+  --warn-bg: #3a2e12;
+  --accent: #2f81f7;
+  --selection: #264f78;
+  --active-line: rgb(110 118 129 / 0.12);
+  --node: rgb(56 139 253 / 0.12);
+  --syn-keyword: #ff7b72;
+  --syn-string: #a5d6ff;
+  --syn-number: #79c0ff;
+  --syn-comment: #8b949e;
+  --syn-property: #ffa657;
+  --syn-function: #d2a8ff;
+  --syn-type: #ffa657;
+  --syn-tag: #7ee787;
+  --syn-attribute: #79c0ff;
+  --syn-heading: #79c0ff;
+  --syn-link: #58a6ff;
+  color-scheme: dark;
+  --hover: rgb(177 186 196 / 0.1);
+  --active: #2d333b;
+  --raised: #1c2128;
+  --shadow-sm: 0 1px 2px rgb(1 4 9 / 0.6);
+  --shadow-lg: 0 12px 32px rgb(1 4 9 / 0.65), 0 1px 3px rgb(1 4 9 / 0.5);
+  --accent-soft: rgb(56 139 253 / 0.15);
+  --ok: #3fb950;
+  --ok-bg: rgb(46 160 67 / 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+code {
+  font-family: var(--mono);
+}
+
+/* More contrast when the system asks for it: stronger lines and muted text. */
+@media (prefers-contrast: more) {
+  :root {
+    --fg-muted: #3d444d;
+    --line: #6e7781;
+    --selection: #8cc4ff;
+  }
+}
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+  :root {
+    --fg-muted: #c9d1d9;
+    --line: #8b949e;
+    --selection: #1f6feb;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+/* Form controls drawn by the app, not the toolkit, so they match the buttons in both themes. */
+select {
+  appearance: none;
+  font: inherit;
+  font-size: 12.5px;
+  height: 28px;
+  padding: 0 28px 0 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--raised)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238b949e' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    no-repeat right 10px center;
+  color: var(--fg);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+select:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--fg-muted) 50%, var(--line));
+}
+select:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+input[type="search"],
+input[type="text"],
+input:not([type]) {
+  font: inherit;
+  font-size: 12.5px;
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--fg);
+}
+input[type="search"]:focus,
+input[type="text"]:focus,
+input:not([type]):focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+input::placeholder {
+  color: var(--fg-muted);
+  opacity: 0.8;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--accent);
+}

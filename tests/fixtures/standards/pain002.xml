@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.10">
+  <CstmrPmtStsRpt>
+    <GrpHdr><MsgId>STS-1</MsgId><CreDtTm>2026-11-01T10:00:00</CreDtTm></GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>PAY-2026-11-01</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.09</OrgnlMsgNmId>
+      <OrgnlNbOfTxs>2</OrgnlNbOfTxs>
+      <GrpSts>PART</GrpSts>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>BATCH-1</OrgnlPmtInfId>
+      <PmtInfSts>PART</PmtInfSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>E2E-1</OrgnlEndToEndId>
+        <TxSts>ACCP</TxSts>
+      </TxInfAndSts>
+      <TxInfAndSts>
+        <OrgnlEndToEndId>E2E-2</OrgnlEndToEndId>
+        <TxSts>RJCT</TxSts>
+        <StsRsnInf><Rsn><Cd>AC04</Cd></Rsn><AddtlInf>Closed account number</AddtlInf></StsRsnInf>
+        <OrgnlTxRef><Amt><InstdAmt Ccy="EUR">250.00</InstdAmt></Amt></OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>

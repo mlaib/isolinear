@@ -1,0 +1,7 @@
+# Advisories accepted after review. Both reach us only through the GTK 0.18 bindings Tauri uses
+# on Linux; revisit when Tauri moves to newer gtk-rs.
+[advisories]
+ignore = [
+  "RUSTSEC-2024-0370", # proc-macro-error is unmaintained (build-time macro of gtk 0.18)
+  "RUSTSEC-2024-0429", # glib VariantStrIter iterators are unsound; not called by this program
+]

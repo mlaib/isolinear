@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuditFile xmlns="urn:OECD:StandardAuditFile-Tax:PT_1.04_01">
+  <Header>
+    <AuditFileVersion>1.04_01</AuditFileVersion>
+    <CompanyID>Lisboa 123456</CompanyID>
+    <TaxRegistrationNumber>500000000</TaxRegistrationNumber>
+    <TaxAccountingBasis>C</TaxAccountingBasis>
+    <CompanyName>Exemplo Investigação, Lda.</CompanyName>
+    <BusinessName>Exemplo</BusinessName>
+    <CompanyAddress>
+      <AddressDetail>Rua Augusta 100</AddressDetail>
+      <City>Lisboa</City>
+      <PostalCode>1100-053</PostalCode>
+      <Country>PT</Country>
+    </CompanyAddress>
+    <FiscalYear>2025</FiscalYear>
+    <StartDate>2025-01-01</StartDate>
+    <EndDate>2025-12-31</EndDate>
+    <CurrencyCode>EUR</CurrencyCode>
+    <DateCreated>2026-02-10</DateCreated>
+    <TaxEntity>Global</TaxEntity>
+    <ProductCompanyTaxID>509999999</ProductCompanyTaxID>
+    <SoftwareCertificateNumber>9999</SoftwareCertificateNumber>
+    <ProductID>Contabilidade Exemplo/Exemplo Software Lda</ProductID>
+    <ProductVersion>4.2</ProductVersion>
+  </Header>
+  <MasterFiles>
+    <GeneralLedgerAccounts>
+      <TaxonomyReference>S</TaxonomyReference>
+      <Account>
+        <AccountID>211</AccountID>
+        <AccountDescription>Clientes c/c</AccountDescription>
+        <OpeningDebitBalance>0.00</OpeningDebitBalance>
+        <OpeningCreditBalance>0.00</OpeningCreditBalance>
+        <ClosingDebitBalance>670.00</ClosingDebitBalance>
+        <ClosingCreditBalance>0.00</ClosingCreditBalance>
+        <GroupingCategory>GM</GroupingCategory>
+        <TaxonomyCode>10</TaxonomyCode>
+      </Account>
+      <Account>
+        <AccountID>711</AccountID>
+        <AccountDescription>Vendas de mercadorias</AccountDescription>
+        <OpeningDebitBalance>0.00</OpeningDebitBalance>
+        <OpeningCreditBalance>0.00</OpeningCreditBalance>
+        <ClosingDebitBalance>0.00</ClosingDebitBalance>
+        <ClosingCreditBalance>1000.00</ClosingCreditBalance>
+        <GroupingCategory>GM</GroupingCategory>
+        <TaxonomyCode>500</TaxonomyCode>
+      </Account>
+    </GeneralLedgerAccounts>
+    <Customer>
+      <CustomerID>C001</CustomerID>
+      <AccountID>211</AccountID>
+      <CustomerTaxID>501234567</CustomerTaxID>
+      <CompanyName>Cliente Exemplo, S.A.</CompanyName>
+      <BillingAddress>
+        <AddressDetail>Avenida da Liberdade 1</AddressDetail>
+        <City>Lisboa</City>
+        <PostalCode>1250-096</PostalCode>
+        <Country>PT</Country>
+      </BillingAddress>
+      <SelfBillingIndicator>0</SelfBillingIndicator>
+    </Customer>
+    <Supplier>
+      <SupplierID>S001</SupplierID>
+      <AccountID>221</AccountID>
+      <SupplierTaxID>502345678</SupplierTaxID>
+      <CompanyName>Fornecedor Exemplo, Lda.</CompanyName>
+      <BillingAddress>
+        <AddressDetail>Rua do Ouro 5</AddressDetail>
+        <City>Porto</City>
+        <PostalCode>4000-001</PostalCode>
+        <Country>PT</Country>
+      </BillingAddress>
+      <SelfBillingIndicator>0</SelfBillingIndicator>
+    </Supplier>
+    <Product>
+      <ProductType>P</ProductType>
+      <ProductCode>LIV-01</ProductCode>
+      <ProductDescription>Livro técnico</ProductDescription>
+      <ProductNumberCode>LIV-01</ProductNumberCode>
+    </Product>
+    <TaxTable>
+      <TaxTableEntry>
+        <TaxType>IVA</TaxType>
+        <TaxCountryRegion>PT</TaxCountryRegion>
+        <TaxCode>NOR</TaxCode>
+        <Description>Taxa normal</Description>
+        <TaxPercentage>23</TaxPercentage>
+      </TaxTableEntry>
+      <TaxTableEntry>
+        <TaxType>IVA</TaxType>
+        <TaxCountryRegion>PT</TaxCountryRegion>
+        <TaxCode>RED</TaxCode>
+        <Description>Taxa reduzida</Description>
+        <TaxPercentage>6</TaxPercentage>
+      </TaxTableEntry>
+    </TaxTable>
+  </MasterFiles>
+  <GeneralLedgerEntries>
+    <NumberOfEntries>2</NumberOfEntries>
+    <TotalDebit>1670.00</TotalDebit>
+    <TotalCredit>1670.00</TotalCredit>
+    <Journal>
+      <JournalID>VND</JournalID>
+      <Description>Vendas</Description>
+      <Transaction>
+        <TransactionID>2025-03-14 VND 1</TransactionID>
+        <Period>3</Period>
+        <TransactionDate>2025-03-14</TransactionDate>
+        <SourceID>Admin</SourceID>
+        <Description>Fatura FT A/1</Description>
+        <DocArchivalNumber>VND-1</DocArchivalNumber>
+        <TransactionType>N</TransactionType>
+        <GLPostingDate>2025-03-14</GLPostingDate>
+        <CustomerID>C001</CustomerID>
+        <Lines>
+          <DebitLine>
+            <RecordID>1</RecordID>
+            <AccountID>211</AccountID>
+            <SourceDocumentID>FT A/1</SourceDocumentID>
+            <SystemEntryDate>2025-03-14T10:00:00</SystemEntryDate>
+            <Description>Cliente Exemplo</Description>
+            <DebitAmount>1170.00</DebitAmount>
+          </DebitLine>
+          <CreditLine>
+            <RecordID>2</RecordID>
+            <AccountID>711</AccountID>
+            <SourceDocumentID>FT A/1</SourceDocumentID>
+            <SystemEntryDate>2025-03-14T10:00:00</SystemEntryDate>
+            <Description>Venda de livros</Description>
+            <CreditAmount>1000.00</CreditAmount>
+          </CreditLine>
+          <CreditLine>
+            <RecordID>3</RecordID>
+            <AccountID>2433</AccountID>
+            <SourceDocumentID>FT A/1</SourceDocumentID>
+            <SystemEntryDate>2025-03-14T10:00:00</SystemEntryDate>
+            <Description>IVA liquidado</Description>
+            <CreditAmount>170.00</CreditAmount>
+          </CreditLine>
+        </Lines>
+      </Transaction>
+      <Transaction>
+        <TransactionID>2025-04-02 VND 2</TransactionID>
+        <Period>4</Period>
+        <TransactionDate>2025-04-02</TransactionDate>
+        <SourceID>Admin</SourceID>
+        <Description>Recebimento RC 1</Description>
+        <DocArchivalNumber>VND-2</DocArchivalNumber>
+        <TransactionType>N</TransactionType>
+        <GLPostingDate>2025-04-02</GLPostingDate>
+        <Lines>
+          <DebitLine>
+            <RecordID>4</RecordID>
+            <AccountID>12</AccountID>
+            <SystemEntryDate>2025-04-02T09:00:00</SystemEntryDate>
+            <Description>Depósito</Description>
+            <DebitAmount>500.00</DebitAmount>
+          </DebitLine>
+          <CreditLine>
+            <RecordID>5</RecordID>
+            <AccountID>211</AccountID>
+            <SystemEntryDate>2025-04-02T09:00:00</SystemEntryDate>
+            <Description>Cliente Exemplo</Description>
+            <CreditAmount>500.00</CreditAmount>
+          </CreditLine>
+        </Lines>
+      </Transaction>
+    </Journal>
+  </GeneralLedgerEntries>
+  <SourceDocuments>
+    <SalesInvoices>
+      <NumberOfEntries>2</NumberOfEntries>
+      <TotalDebit>0.00</TotalDebit>
+      <TotalCredit>1000.00</TotalCredit>
+      <Invoice>
+        <InvoiceNo>FT A/1</InvoiceNo>
+        <ATCUD>CSDF7T5H-1</ATCUD>
+        <DocumentStatus>
+          <InvoiceStatus>N</InvoiceStatus>
+          <InvoiceStatusDate>2025-03-14T10:00:00</InvoiceStatusDate>
+          <SourceID>Admin</SourceID>
+          <SourceBilling>P</SourceBilling>
+        </DocumentStatus>
+        <Hash>bm90IGEgcmVhbCBoYXNo</Hash>
+        <HashControl>1</HashControl>
+        <Period>3</Period>
+        <InvoiceDate>2025-03-14</InvoiceDate>
+        <InvoiceType>FT</InvoiceType>
+        <SpecialRegimes><SelfBillingIndicator>0</SelfBillingIndicator><CashVATSchemeIndicator>0</CashVATSchemeIndicator><ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator></SpecialRegimes>
+        <SourceID>Admin</SourceID>
+        <SystemEntryDate>2025-03-14T10:00:00</SystemEntryDate>
+        <CustomerID>C001</CustomerID>
+        <Line>
+          <LineNumber>1</LineNumber>
+          <ProductCode>LIV-01</ProductCode>
+          <ProductDescription>Livro técnico</ProductDescription>
+          <Quantity>20</Quantity>
+          <UnitOfMeasure>UN</UnitOfMeasure>
+          <UnitPrice>50.00</UnitPrice>
+          <TaxPointDate>2025-03-14</TaxPointDate>
+          <Description>Livro técnico</Description>
+          <CreditAmount>1000.00</CreditAmount>
+          <Tax><TaxType>IVA</TaxType><TaxCountryRegion>PT</TaxCountryRegion><TaxCode>RED</TaxCode><TaxPercentage>17</TaxPercentage></Tax>
+        </Line>
+        <DocumentTotals>
+          <TaxPayable>170.00</TaxPayable>
+          <NetTotal>1000.00</NetTotal>
+          <GrossTotal>1170.00</GrossTotal>
+        </DocumentTotals>
+      </Invoice>
+      <Invoice>
+        <InvoiceNo>FT A/2</InvoiceNo>
+        <ATCUD>CSDF7T5H-2</ATCUD>
+        <DocumentStatus>
+          <InvoiceStatus>A</InvoiceStatus>
+          <InvoiceStatusDate>2025-03-20T15:00:00</InvoiceStatusDate>
+          <Reason>Erro de digitação</Reason>
+          <SourceID>Admin</SourceID>
+          <SourceBilling>P</SourceBilling>
+        </DocumentStatus>
+        <Hash>b3RoZXIgaGFzaA==</Hash>
+        <HashControl>1</HashControl>
+        <Period>3</Period>
+        <InvoiceDate>2025-03-20</InvoiceDate>
+        <InvoiceType>FT</InvoiceType>
+        <SourceID>Admin</SourceID>
+        <SystemEntryDate>2025-03-20T14:00:00</SystemEntryDate>
+        <CustomerID>C001</CustomerID>
+        <Line>
+          <LineNumber>1</LineNumber>
+          <ProductCode>LIV-01</ProductCode>
+          <ProductDescription>Livro técnico</ProductDescription>
+          <Quantity>4</Quantity>
+          <UnitOfMeasure>UN</UnitOfMeasure>
+          <UnitPrice>50.00</UnitPrice>
+          <TaxPointDate>2025-03-20</TaxPointDate>
+          <Description>Livro técnico</Description>
+          <CreditAmount>200.00</CreditAmount>
+          <Tax><TaxType>IVA</TaxType><TaxCountryRegion>PT</TaxCountryRegion><TaxCode>RED</TaxCode><TaxPercentage>6</TaxPercentage></Tax>
+        </Line>
+        <DocumentTotals>
+          <TaxPayable>12.00</TaxPayable>
+          <NetTotal>200.00</NetTotal>
+          <GrossTotal>212.00</GrossTotal>
+        </DocumentTotals>
+      </Invoice>
+    </SalesInvoices>
+    <Payments>
+      <NumberOfEntries>1</NumberOfEntries>
+      <TotalDebit>0.00</TotalDebit>
+      <TotalCredit>500.00</TotalCredit>
+      <Payment>
+        <PaymentRefNo>RC A/1</PaymentRefNo>
+        <ATCUD>CSDF7T5J-1</ATCUD>
+        <TransactionDate>2025-04-02</TransactionDate>
+        <PaymentType>RC</PaymentType>
+        <DocumentStatus><PaymentStatus>N</PaymentStatus><PaymentStatusDate>2025-04-02T09:00:00</PaymentStatusDate><SourceID>Admin</SourceID><SourcePayment>P</SourcePayment></DocumentStatus>
+        <PaymentMethod><PaymentMechanism>TB</PaymentMechanism><PaymentAmount>500.00</PaymentAmount><PaymentDate>2025-04-02</PaymentDate></PaymentMethod>
+        <SourceID>Admin</SourceID>
+        <SystemEntryDate>2025-04-02T09:00:00</SystemEntryDate>
+        <CustomerID>C001</CustomerID>
+        <Line><LineNumber>1</LineNumber><SourceDocumentID><OriginatingON>FT A/1</OriginatingON><InvoiceDate>2025-03-14</InvoiceDate></SourceDocumentID><CreditAmount>500.00</CreditAmount></Line>
+        <DocumentTotals><TaxPayable>0.00</TaxPayable><NetTotal>500.00</NetTotal><GrossTotal>500.00</GrossTotal></DocumentTotals>
+      </Payment>
+    </Payments>
+  </SourceDocuments>
+</AuditFile>

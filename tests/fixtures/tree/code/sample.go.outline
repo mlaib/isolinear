@@ -1,0 +1,6 @@
+Document [3] @0..253
+  Symbol Counter = type [0] @64..97
+  Symbol Add = func [1] @98..232
+    Symbol Delta = type [0] @137..173
+  Symbol unfinished = func [0] @233..253
+Warning @251..252: expected '}' before the end of the file

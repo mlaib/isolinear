@@ -1,0 +1,7 @@
+{
+  "bundle": {
+    "resources": {
+      "../target/release/isolinear_preview_handler.dll": "isolinear_preview_handler.dll"
+    }
+  }
+}

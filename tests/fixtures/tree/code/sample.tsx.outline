@@ -1,0 +1,6 @@
+Document [3] @0..198
+  Symbol View = class [1] @54..119
+    Symbol render [0] @67..117
+  Symbol Panel = const [0] @120..172
+  Symbol unfinished = function [0] @174..198
+Warning @196..197: expected '}' before the end of the file

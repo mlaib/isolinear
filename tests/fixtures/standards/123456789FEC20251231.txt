@@ -1,0 +1,11 @@
+﻿JournalCode|JournalLib|EcritureNum|EcritureDate|CompteNum|CompteLib|CompAuxNum|CompAuxLib|PieceRef|PieceDate|EcritureLib|Debit|Credit|EcritureLet|DateLet|ValidDate|Montantdevise|Idevise
+AN|A nouveaux|AN000001|20250101|101300|Capital souscrit appelé versé|||AN-2025|20250101|Reprise des soldes|0,00|10000,00|||20250105||
+AN|A nouveaux|AN000001|20250101|512000|Banque|||AN-2025|20250101|Reprise des soldes|10000,00|0,00|||20250105||
+AC|Achats|AC000001|20250115|606400|Fournitures administratives|||F2025-017|20250114|Papeterie Dupont|100,00|0,00|||20250120||
+AC|Achats|AC000001|20250115|445660|TVA déductible sur ABS|||F2025-017|20250114|Papeterie Dupont|20,00|0,00|||20250120||
+AC|Achats|AC000001|20250115|401000|Fournisseurs|0042DUP|Papeterie Dupont|F2025-017|20250114|Papeterie Dupont|0,00|120,00|AA|20250210|20250120||
+BQ|Banque|000123|20250210|401000|Fournisseurs|0042DUP|Papeterie Dupont|VIR-0210|20250210|Règlement Dupont|120,00|0,00|AA|20250210|20250212||
+BQ|Banque|000123|20250210|512000|Banque|||VIR-0210|20250210|Règlement Dupont|0,00|120,00|||20250212||
+VE|Ventes|VE000001|20251231|411000|Clients|411ACM|ACME Ltd|FV2025-090|20251231|Facture ACME|1200,00|0,00|||20251231|1000,00|USD
+VE|Ventes|VE000001|20251231|706000|Prestations de services|||FV2025-090|20251231|Facture ACME|0,00|1000,00|||20251231||
+VE|Ventes|VE000001|20251231|445710|TVA collectée|||FV2025-090|20251231|Facture ACME|0,00|200,00|||20251231||

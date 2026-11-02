@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Isolinear Quick Look</string>
+	<key>CFBundleExecutable</key>
+	<string>IsolinearQuickLook</string>
+	<key>CFBundleIdentifier</key>
+	<string>io.github.mlaib.isolinear.quicklook</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>IsolinearQuickLook</string>
+	<key>CFBundlePackageType</key>
+	<string>XPC!</string>
+	<key>CFBundleShortVersionString</key>
+	<string>@VERSION@</string>
+	<key>CFBundleVersion</key>
+	<string>@VERSION@</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>LSMinimumSystemVersion</key>
+	<string>12.0</string>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.quicklook.preview</string>
+		<key>NSExtensionPrincipalClass</key>
+		<string>IsolinearQuickLook.PreviewProvider</string>
+		<key>NSExtensionAttributes</key>
+		<dict>
+			<key>QLIsDataBasedPreview</key>
+			<true/>
+			<key>QLSupportsSearchableItems</key>
+			<false/>
+			<!-- Types declared by the app (src-tauri/Info.plist), and a few the system knows. -->
+			<key>QLSupportedContentTypes</key>
+			<array>
+				<string>io.github.mlaib.isolinear.parquet</string>
+				<string>io.github.mlaib.isolinear.avro</string>
+				<string>io.github.mlaib.isolinear.orc</string>
+				<string>io.github.mlaib.isolinear.arrow</string>
+				<string>io.github.mlaib.isolinear.hdf5</string>
+				<string>io.github.mlaib.isolinear.npy</string>
+				<string>io.github.mlaib.isolinear.npz</string>
+				<string>io.github.mlaib.isolinear.sqlite</string>
+				<string>io.github.mlaib.isolinear.msgpack</string>
+				<string>io.github.mlaib.isolinear.protobuf</string>
+				<string>io.github.mlaib.isolinear.notebook</string>
+				<string>io.github.mlaib.isolinear.geojson</string>
+				<string>io.github.mlaib.isolinear.edifact</string>
+				<string>io.github.mlaib.isolinear.x12</string>
+				<string>io.github.mlaib.isolinear.hl7</string>
+				<string>io.github.mlaib.isolinear.dicom</string>
+				<string>io.github.mlaib.isolinear.bibtex</string>
+				<string>io.github.mlaib.isolinear.toml</string>
+				<string>public.json</string>
+				<string>public.xml</string>
+				<string>public.yaml</string>
+				<string>net.daringfireball.markdown</string>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>

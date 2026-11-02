@@ -1,0 +1,54 @@
+# Layout of payments.dat (fixed-width, one record per line)
+name = "Example payment file v2"
+
+[[record]]
+name = "Header"
+match_start = 1
+match = "H"
+[[record.field]]
+name = "Record type"
+start = 1
+length = 1
+[[record.field]]
+name = "Created"
+start = 2
+length = 8
+type = "date"
+pattern = "YYYYMMDD"
+[[record.field]]
+name = "Sender"
+start = 10
+length = 20
+
+[[record]]
+name = "Payment"
+match_start = 1
+match = "D"
+[[record.field]]
+name = "Account"
+start = 2
+length = 10
+[[record.field]]
+name = "Amount"
+start = 12
+length = 10
+type = "decimal"
+decimals = 2
+[[record.field]]
+name = "Value date"
+start = 22
+length = 8
+type = "date"
+[[record.field]]
+name = "Payee name"
+start = 30
+length = 20
+
+[[record]]
+name = "Trailer"
+match = "T"
+[[record.field]]
+name = "Count"
+start = 2
+length = 6
+type = "integer"

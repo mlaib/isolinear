@@ -1,0 +1,6 @@
+Document [4] @0..144
+  Symbol all [0] @37..75
+  Symbol build [0] @75..101
+  Symbol test [0] @101..122
+  Symbol unfinished [0] @122..144
+Warning @135..136: expected ')' before the end of the file

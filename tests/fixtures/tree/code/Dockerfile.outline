@@ -1,0 +1,5 @@
+Document [3] @0..195
+  Symbol build = FROM [0] @22..92
+  Symbol runtime = FROM [0] @92..146
+  Symbol unfinished = FROM [0] @146..195
+Warning @181..195: expected the closing string delimiter before the end of the file

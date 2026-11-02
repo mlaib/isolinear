@@ -1,0 +1,16 @@
+title = "Inventory"
+created = 1979-05-27T07:32:00Z
+
+[[products]]
+name = "Hammer"
+sku = 0x7F
+sizes = [1, 2, 3]
+details = { weight = 1.5, active = true, labels = { color = 'red' } }
+
+[products.stock]
+count = 1_000
+
+[[products]]
+name = "Nail"
+[products.stock]
+count = 0b100

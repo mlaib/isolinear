@@ -1,0 +1,14 @@
+a = 1
+a = 2
+b.c = 1
+[b]
+[t]
+x = 1
+[t]
+x = 2
+[[arr]]
+[arr.sub]
+[[arr]]
+[arr.sub]
+[t.x]
+inline = { k = 1, k = 2 }

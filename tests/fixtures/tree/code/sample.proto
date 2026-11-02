@@ -1,0 +1,11 @@
+syntax = "proto3";
+// message Ghost {}
+option java_package = "message Ghost {}";
+message Packet {
+    message Header { uint32 length = 1; }
+    Header header = 1;
+}
+service Reader {
+    rpc Read(Packet) returns (Packet);
+}
+message Unfinished {

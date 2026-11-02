@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Isolinear test fixture: a small OPC UA information model, written by hand -->
+<UANodeSet xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LastModified="2026-11-01T00:00:00Z">
+  <NamespaceUris>
+    <Uri>http://example.com/UA/Pumps/</Uri>
+  </NamespaceUris>
+  <Models>
+    <Model ModelUri="http://example.com/UA/Pumps/" Version="1.0.0" PublicationDate="2026-11-01T00:00:00Z">
+      <RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.05.03" PublicationDate="2023-12-15T00:00:00Z"/>
+    </Model>
+  </Models>
+  <Aliases>
+    <Alias Alias="Double">i=11</Alias>
+    <Alias Alias="String">i=12</Alias>
+    <Alias Alias="Organizes">i=35</Alias>
+    <Alias Alias="HasTypeDefinition">i=40</Alias>
+    <Alias Alias="HasSubtype">i=45</Alias>
+    <Alias Alias="HasProperty">i=46</Alias>
+    <Alias Alias="HasComponent">i=47</Alias>
+  </Aliases>
+  <UAObjectType NodeId="ns=1;i=1001" BrowseName="1:PumpType">
+    <DisplayName>PumpType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6001</Reference>
+    </References>
+  </UAObjectType>
+  <UAVariable NodeId="ns=1;i=6001" BrowseName="1:Speed" ParentNodeId="ns=1;i=1001" DataType="Double">
+    <DisplayName>Speed</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1001</Reference>
+    </References>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=5001" BrowseName="1:Pumps" ParentNodeId="i=85">
+    <DisplayName>Pumps</DisplayName>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">i=85</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5002" BrowseName="1:Pump1" ParentNodeId="ns=1;i=5001">
+    <DisplayName>Pump 1</DisplayName>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5001</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=1;i=1001</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=6002" BrowseName="1:Speed" ParentNodeId="ns=1;i=5002" DataType="Double" AccessLevel="3">
+    <DisplayName>Speed</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6003" BrowseName="1:SerialNumber" ParentNodeId="ns=1;i=5002" DataType="String">
+    <DisplayName>Serial number</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5002</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=7001" BrowseName="1:Start" ParentNodeId="ns=1;i=5002">
+    <DisplayName>Start</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+    </References>
+  </UAMethod>
+  <UADataType NodeId="ns=1;i=3001" BrowseName="1:PumpState">
+    <DisplayName>PumpState</DisplayName>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+    </References>
+    <Definition Name="1:PumpState">
+      <Field Name="Off" Value="0"/>
+      <Field Name="On" Value="1"/>
+    </Definition>
+  </UADataType>
+</UANodeSet>

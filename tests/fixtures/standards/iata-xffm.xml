@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:FlightManifest xmlns:rsm="iata:flightmanifest:1" xmlns:ram="iata:datamodel:3">
+  <rsm:MessageHeaderDocument>
+    <ram:ID>EK9937-20261031</ram:ID>
+    <ram:Name>Flight Manifest</ram:Name>
+    <ram:TypeCode>122</ram:TypeCode>
+    <ram:IssueDateTime>2026-10-31T22:10:00</ram:IssueDateTime>
+    <ram:PurposeCode>Creation</ram:PurposeCode>
+    <ram:VersionID>3.00</ram:VersionID>
+    <ram:SenderParty><ram:PrimaryID schemeID="C">REUAIR08EKXXXXXX</ram:PrimaryID></ram:SenderParty>
+  </rsm:MessageHeaderDocument>
+  <rsm:BusinessHeaderDocument><ram:ID>FFM-EK9937-1031</ram:ID></rsm:BusinessHeaderDocument>
+  <rsm:LogisticsTransportMovement>
+    <ram:StageCode>Main-Carriage</ram:StageCode>
+    <ram:ModeCode>4</ram:ModeCode>
+    <ram:ID>EK9937</ram:ID>
+    <ram:SequenceNumeric>1</ram:SequenceNumeric>
+    <ram:TotalGrossWeightMeasure unitCode="KGM">912.5</ram:TotalGrossWeightMeasure>
+    <ram:TotalPieceQuantity>9</ram:TotalPieceQuantity>
+    <ram:UsedLogisticsTransportMeans><ram:Name>EK</ram:Name><ram:Type>B77F</ram:Type></ram:UsedLogisticsTransportMeans>
+    <ram:DepartureEvent>
+      <ram:DepartureOccurrenceDateTime>2026-10-31T21:40:00</ram:DepartureOccurrenceDateTime>
+      <ram:OccurrenceDepartureLocation><ram:ID>LUX</ram:ID></ram:OccurrenceDepartureLocation>
+    </ram:DepartureEvent>
+  </rsm:LogisticsTransportMovement>
+  <rsm:ArrivalEvent>
+    <ram:ArrivalOccurrenceDateTime>2026-11-01T06:30:00</ram:ArrivalOccurrenceDateTime>
+    <ram:OccurrenceArrivalLocation><ram:ID>DXB</ram:ID><ram:Name>Dubai</ram:Name></ram:OccurrenceArrivalLocation>
+    <ram:AssociatedTransportCargo>
+      <ram:TypeCode>ULD</ram:TypeCode>
+      <ram:UtilizedUnitLoadTransportEquipment><ram:ID>PMC12345EK</ram:ID></ram:UtilizedUnitLoadTransportEquipment>
+      <ram:IncludedMasterConsignment>
+        <ram:GrossWeightMeasure unitCode="KGM">412.5</ram:GrossWeightMeasure>
+        <ram:PieceQuantity>5</ram:PieceQuantity>
+        <ram:TotalPieceQuantity>5</ram:TotalPieceQuantity>
+        <ram:TransportSplitDescription>T</ram:TransportSplitDescription>
+        <ram:SummaryDescription>LAB EQUIPMENT</ram:SummaryDescription>
+        <ram:TransportContractDocument><ram:ID>176-12345675</ram:ID></ram:TransportContractDocument>
+        <ram:OriginLocation><ram:ID>LUX</ram:ID></ram:OriginLocation>
+        <ram:FinalDestinationLocation><ram:ID>DXB</ram:ID></ram:FinalDestinationLocation>
+      </ram:IncludedMasterConsignment>
+      <ram:IncludedMasterConsignment>
+        <ram:GrossWeightMeasure unitCode="KGM">500.0</ram:GrossWeightMeasure>
+        <ram:PieceQuantity>4</ram:PieceQuantity>
+        <ram:TotalPieceQuantity>4</ram:TotalPieceQuantity>
+        <ram:TransportSplitDescription>T</ram:TransportSplitDescription>
+        <ram:SummaryDescription>SPARE PARTS</ram:SummaryDescription>
+        <ram:TransportContractDocument><ram:ID>176-76543213</ram:ID></ram:TransportContractDocument>
+        <ram:OriginLocation><ram:ID>LUX</ram:ID></ram:OriginLocation>
+        <ram:FinalDestinationLocation><ram:ID>BOM</ram:ID></ram:FinalDestinationLocation>
+      </ram:IncludedMasterConsignment>
+    </ram:AssociatedTransportCargo>
+  </rsm:ArrivalEvent>
+</rsm:FlightManifest>

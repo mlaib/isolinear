@@ -1,0 +1,27 @@
+[package]
+name = "isolinear-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2024"
+license = "Apache-2.0"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+isolinear-formats = { path = "../crates/formats" }
+
+[[bin]]
+name = "trees"
+path = "fuzz_targets/trees.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "text"
+path = "fuzz_targets/text.rs"
+test = false
+doc = false
+bench = false

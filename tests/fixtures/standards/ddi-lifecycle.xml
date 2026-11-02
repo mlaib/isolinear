@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ddi:DDIInstance xmlns:ddi="ddi:instance:3_3" xmlns:s="ddi:studyunit:3_3" xmlns:r="ddi:reusable:3_3" xmlns:l="ddi:logicalproduct:3_3" xmlns:d="ddi:datacollection:3_3">
+  <s:StudyUnit>
+    <r:Citation><r:Title><r:String>European Values Pilot</r:String></r:Title><r:Creator><r:CreatorName><r:String>Example Institute</r:String></r:CreatorName></r:Creator></r:Citation>
+    <d:DataCollection><d:QuestionScheme><d:QuestionItem><r:ID>Q1</r:ID><d:QuestionItemName><r:String>Q1</r:String></d:QuestionItemName><d:QuestionText><d:LiteralText><d:Text>Do you trust people?</d:Text></d:LiteralText></d:QuestionText></d:QuestionItem></d:QuestionScheme></d:DataCollection>
+    <l:LogicalProduct><l:VariableScheme><l:Variable><r:ID>V1</r:ID><l:VariableName><r:String>trust</r:String></l:VariableName><r:Label><r:Content>Generalised trust</r:Content></r:Label><r:QuestionReference><r:ID>Q1</r:ID></r:QuestionReference></l:Variable></l:VariableScheme></l:LogicalProduct>
+  </s:StudyUnit>
+</ddi:DDIInstance>

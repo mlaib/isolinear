@@ -1,0 +1,31 @@
+name: Fuzz
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fuzz:
+    if: ${{ vars.LINUX_RUNNER != '' || vars.HOSTED_CI == 'true' }}
+    runs-on: ${{ vars.LINUX_RUNNER || 'ubuntu-24.04' }}
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rust toolchain on the path
+        run: echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+      - name: Nightly and cargo-fuzz
+        run: |
+          rustup toolchain list | grep -q nightly || rustup toolchain install nightly --profile minimal
+          cargo +nightly fuzz --version || cargo +nightly install cargo-fuzz --locked
+      - name: Fuzz each target
+        working-directory: fuzz
+        run: |
+          for target in trees text; do
+            cargo +nightly fuzz run "$target" -- -max_total_time=600 -rss_limit_mb=2048
+          done
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: fuzz-crashes
+          path: fuzz/artifacts

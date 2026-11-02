@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message:StructureSpecificData xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message"
+    xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common"
+    xmlns:ss="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/structurespecific"
+    xmlns:ns1="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ESTAT:UNE_RT_A(1.0):ObsLevelDim:TIME_PERIOD"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <message:Header>
+    <message:ID>UNE_RT_A_1730000000</message:ID>
+    <message:Test>false</message:Test>
+    <message:Prepared>2026-10-31T12:00:00</message:Prepared>
+    <message:Sender id="ESTAT"><common:Name xml:lang="en">Eurostat</common:Name></message:Sender>
+    <message:Structure structureID="ESTAT_UNE_RT_A_1_0" namespace="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ESTAT:UNE_RT_A(1.0):ObsLevelDim:TIME_PERIOD" dimensionAtObservation="TIME_PERIOD">
+      <common:StructureUsage><Ref agencyID="ESTAT" id="UNE_RT_A" version="1.0"/></common:StructureUsage>
+    </message:Structure>
+  </message:Header>
+  <message:DataSet ss:dataScope="DataStructure" xsi:type="ns1:DataSetType" ss:structureRef="ESTAT_UNE_RT_A_1_0">
+    <Series freq="A" age="Y15-74" unit="PC_ACT" sex="T" geo="LU">
+      <Obs TIME_PERIOD="2023" OBS_VALUE="5.2"/>
+      <Obs TIME_PERIOD="2024" OBS_VALUE="6.4" OBS_FLAG="p"/>
+    </Series>
+    <Series freq="A" age="Y15-74" unit="PC_ACT" sex="T" geo="BE">
+      <Obs TIME_PERIOD="2023" OBS_VALUE="5.5"/>
+      <Obs TIME_PERIOD="2024" OBS_VALUE="5.7"/>
+    </Series>
+  </message:DataSet>
+</message:StructureSpecificData>

@@ -1,0 +1,5 @@
+Document [2] @0..133
+  Symbol outer = function [1] @54..117
+    Symbol inner [0] @71..105
+  Symbol unfinished [0] @118..133
+Warning @131..132: expected '}' before the end of the file

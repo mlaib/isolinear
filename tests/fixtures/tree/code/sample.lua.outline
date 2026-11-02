@@ -1,0 +1,5 @@
+Document [2] @0..178
+  Symbol outer = function [1] @64..155
+    Symbol inner = function [0] @87..132
+  Symbol unfinished = function [0] @156..177
+Warning @165..175: expected 'end' before the end of the file

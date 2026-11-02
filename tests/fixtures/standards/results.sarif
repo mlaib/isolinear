@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "ExampleLint",
+          "semanticVersion": "3.2.1",
+          "organization": "Example Tools",
+          "informationUri": "https://tools.example.org/examplelint",
+          "rules": [
+            {
+              "id": "EL1001",
+              "name": "UnusedVariable",
+              "shortDescription": { "text": "A variable is declared but never used." },
+              "defaultConfiguration": { "level": "warning" }
+            },
+            {
+              "id": "EL2002",
+              "name": "SqlInjection",
+              "shortDescription": { "text": "Untrusted input reaches a SQL query." },
+              "defaultConfiguration": { "level": "error" },
+              "helpUri": "https://tools.example.org/rules/EL2002",
+              "messageStrings": { "default": { "text": "Input from {0} flows into a query." } }
+            },
+            {
+              "id": "EL3003",
+              "name": "TodoComment",
+              "shortDescription": { "text": "A TODO comment was left in the code." }
+            }
+          ]
+        }
+      },
+      "invocations": [
+        { "executionSuccessful": true, "exitCode": 0, "startTimeUtc": "2026-10-30T14:02:11Z" }
+      ],
+      "artifacts": [
+        { "location": { "uri": "src/app.py", "uriBaseId": "SRCROOT" } },
+        { "location": { "uri": "src/db.py", "uriBaseId": "SRCROOT" } }
+      ],
+      "results": [
+        {
+          "ruleId": "EL1001",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": { "text": "Variable 'tmp' is never used." },
+          "locations": [
+            { "physicalLocation": { "artifactLocation": { "uri": "src/app.py", "uriBaseId": "SRCROOT" }, "region": { "startLine": 14, "startColumn": 5 } } }
+          ]
+        },
+        {
+          "ruleId": "EL2002",
+          "ruleIndex": 1,
+          "message": { "id": "default", "arguments": ["request.args['q']"] },
+          "locations": [
+            { "physicalLocation": { "artifactLocation": { "uri": "src/db.py", "uriBaseId": "SRCROOT" }, "region": { "startLine": 42, "startColumn": 17 } } }
+          ]
+        },
+        {
+          "ruleId": "EL3003",
+          "level": "note",
+          "message": { "text": "TODO: remove the debug flag." },
+          "locations": [
+            { "physicalLocation": { "artifactLocation": { "uri": "src/app.py", "uriBaseId": "SRCROOT" }, "region": { "startLine": 3, "startColumn": 1 } } }
+          ]
+        }
+      ]
+    }
+  ]
+}

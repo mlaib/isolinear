@@ -1,0 +1,5 @@
+Document [2] @0..140
+  Symbol Counter = class [1] @46..120
+    Symbol next = fun [0] @78..118
+  Symbol unfinished = fun [0] @121..140
+Warning @138..139: expected '}' before the end of the file

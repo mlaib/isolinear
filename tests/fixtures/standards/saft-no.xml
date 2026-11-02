@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n1:AuditFile xmlns:n1="urn:StandardAuditFile-Taxation-Financial:NO">
+  <n1:Header>
+    <n1:AuditFileVersion>1.30</n1:AuditFileVersion>
+    <n1:AuditFileCountry>NO</n1:AuditFileCountry>
+    <n1:AuditFileDateCreated>2026-01-20</n1:AuditFileDateCreated>
+    <n1:SoftwareCompanyName>Eksempel Programvare AS</n1:SoftwareCompanyName>
+    <n1:SoftwareID>Regnskap</n1:SoftwareID>
+    <n1:SoftwareVersion>7.1</n1:SoftwareVersion>
+    <n1:Company>
+      <n1:RegistrationNumber>999999999</n1:RegistrationNumber>
+      <n1:Name>Eksempel Forskning AS</n1:Name>
+      <n1:Address><n1:StreetName>Karl Johans gate</n1:StreetName><n1:City>Oslo</n1:City><n1:PostalCode>0154</n1:PostalCode><n1:Country>NO</n1:Country></n1:Address>
+      <n1:TaxRegistration><n1:TaxRegistrationNumber>999999999MVA</n1:TaxRegistrationNumber></n1:TaxRegistration>
+    </n1:Company>
+    <n1:DefaultCurrencyCode>NOK</n1:DefaultCurrencyCode>
+    <n1:SelectionCriteria>
+      <n1:PeriodStart>1</n1:PeriodStart>
+      <n1:PeriodStartYear>2025</n1:PeriodStartYear>
+      <n1:PeriodEnd>12</n1:PeriodEnd>
+      <n1:PeriodEndYear>2025</n1:PeriodEndYear>
+    </n1:SelectionCriteria>
+    <n1:TaxAccountingBasis>A</n1:TaxAccountingBasis>
+  </n1:Header>
+  <n1:MasterFiles>
+    <n1:GeneralLedgerAccounts>
+      <n1:Account>
+        <n1:AccountID>1500</n1:AccountID>
+        <n1:AccountDescription>Kundefordringer</n1:AccountDescription>
+        <n1:StandardAccountID>15</n1:StandardAccountID>
+        <n1:AccountType>GL</n1:AccountType>
+        <n1:OpeningDebitBalance>0.00</n1:OpeningDebitBalance>
+        <n1:ClosingDebitBalance>12500.00</n1:ClosingDebitBalance>
+      </n1:Account>
+      <n1:Account>
+        <n1:AccountID>3000</n1:AccountID>
+        <n1:AccountDescription>Salgsinntekt</n1:AccountDescription>
+        <n1:StandardAccountID>30</n1:StandardAccountID>
+        <n1:AccountType>GL</n1:AccountType>
+        <n1:OpeningCreditBalance>0.00</n1:OpeningCreditBalance>
+        <n1:ClosingCreditBalance>10000.00</n1:ClosingCreditBalance>
+      </n1:Account>
+    </n1:GeneralLedgerAccounts>
+    <n1:Customers>
+      <n1:Customer>
+        <n1:RegistrationNumber>888888888</n1:RegistrationNumber>
+        <n1:Name>Kunde AS</n1:Name>
+        <n1:Address><n1:City>Bergen</n1:City><n1:Country>NO</n1:Country></n1:Address>
+        <n1:CustomerID>K10</n1:CustomerID>
+        <n1:AccountID>1500</n1:AccountID>
+      </n1:Customer>
+    </n1:Customers>
+    <n1:TaxTable>
+      <n1:TaxTableEntry>
+        <n1:TaxType>MVA</n1:TaxType>
+        <n1:Description>Merverdiavgift</n1:Description>
+        <n1:TaxCodeDetails>
+          <n1:TaxCode>3</n1:TaxCode>
+          <n1:Description>Utgående mva høy sats</n1:Description>
+          <n1:TaxPercentage>25</n1:TaxPercentage>
+          <n1:Country>NO</n1:Country>
+          <n1:StandardTaxCode>3</n1:StandardTaxCode>
+        </n1:TaxCodeDetails>
+      </n1:TaxTableEntry>
+    </n1:TaxTable>
+  </n1:MasterFiles>
+  <n1:GeneralLedgerEntries>
+    <n1:NumberOfEntries>2</n1:NumberOfEntries>
+    <n1:TotalDebit>13000.00</n1:TotalDebit>
+    <n1:TotalCredit>13000.00</n1:TotalCredit>
+    <n1:Journal>
+      <n1:JournalID>SALG</n1:JournalID>
+      <n1:Description>Salg</n1:Description>
+      <n1:Type>S</n1:Type>
+      <n1:Transaction>
+        <n1:TransactionID>101</n1:TransactionID>
+        <n1:Period>5</n1:Period>
+        <n1:PeriodYear>2025</n1:PeriodYear>
+        <n1:TransactionDate>2025-05-12</n1:TransactionDate>
+        <n1:Description>Faktura 101</n1:Description>
+        <n1:SystemEntryDate>2025-05-12</n1:SystemEntryDate>
+        <n1:GLPostingDate>2025-05-12</n1:GLPostingDate>
+        <n1:Line>
+          <n1:RecordID>1</n1:RecordID>
+          <n1:AccountID>1500</n1:AccountID>
+          <n1:CustomerID>K10</n1:CustomerID>
+          <n1:Description>Kunde AS</n1:Description>
+          <n1:DebitAmount><n1:Amount>12500.00</n1:Amount></n1:DebitAmount>
+        </n1:Line>
+        <n1:Line>
+          <n1:RecordID>2</n1:RecordID>
+          <n1:AccountID>3000</n1:AccountID>
+          <n1:Description>Salg</n1:Description>
+          <n1:CreditAmount><n1:Amount>10000.00</n1:Amount></n1:CreditAmount>
+          <n1:TaxInformation><n1:TaxType>MVA</n1:TaxType><n1:TaxCode>3</n1:TaxCode><n1:TaxPercentage>25</n1:TaxPercentage></n1:TaxInformation>
+        </n1:Line>
+        <n1:Line>
+          <n1:RecordID>3</n1:RecordID>
+          <n1:AccountID>2700</n1:AccountID>
+          <n1:Description>Utgående mva</n1:Description>
+          <n1:CreditAmount><n1:Amount>2500.00</n1:Amount></n1:CreditAmount>
+        </n1:Line>
+      </n1:Transaction>
+      <n1:Transaction>
+        <n1:TransactionID>102</n1:TransactionID>
+        <n1:Period>6</n1:Period>
+        <n1:PeriodYear>2025</n1:PeriodYear>
+        <n1:TransactionDate>2025-06-03</n1:TransactionDate>
+        <n1:Description>Innbetaling (feilført)</n1:Description>
+        <n1:SystemEntryDate>2025-06-03</n1:SystemEntryDate>
+        <n1:GLPostingDate>2025-06-03</n1:GLPostingDate>
+        <n1:Line>
+          <n1:RecordID>4</n1:RecordID>
+          <n1:AccountID>1920</n1:AccountID>
+          <n1:Description>Bank</n1:Description>
+          <n1:DebitAmount><n1:Amount>500.00</n1:Amount></n1:DebitAmount>
+        </n1:Line>
+        <n1:Line>
+          <n1:RecordID>5</n1:RecordID>
+          <n1:AccountID>1500</n1:AccountID>
+          <n1:Description>Kunde AS</n1:Description>
+          <n1:CreditAmount><n1:Amount>450.00</n1:Amount></n1:CreditAmount>
+        </n1:Line>
+      </n1:Transaction>
+    </n1:Journal>
+  </n1:GeneralLedgerEntries>
+</n1:AuditFile>

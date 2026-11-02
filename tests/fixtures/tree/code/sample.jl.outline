@@ -1,0 +1,7 @@
+Document [2] @0..246
+  Symbol Tools = module [2] @53..223
+    Symbol Counter = struct [0] @66..111
+    Symbol next = function [1] @112..219
+      Symbol inner = function [0] @137..195
+  Symbol unfinished = function [0] @224..245
+Warning @233..243: expected 'end' before the end of the file

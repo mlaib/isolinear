@@ -1,0 +1,7 @@
+# Column meanings for mapped.csv
+[columns]
+"Ref" = "policy_number"
+"Who" = "insured"
+"Start" = "inception"
+"GWP Orig" = "gross_premium"
+"Ccy" = "currency"

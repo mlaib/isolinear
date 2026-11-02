@@ -1,0 +1,5 @@
+Document [3] @0..192
+  Symbol build_item = function [0] @46..116
+  Symbol test_item = macro [0] @117..170
+  Symbol unfinished = function [0] @171..192
+Warning @180..190: expected 'endfunction' before the end of the file

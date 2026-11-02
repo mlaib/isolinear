@@ -1,0 +1,127 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-example-1",
+  "meta": {
+    "lastUpdated": "2026-10-28T09:15:00Z"
+  },
+  "type": "collection",
+  "timestamp": "2026-10-28T09:15:00Z",
+  "entry": [
+    {
+      "fullUrl": "http://example.org/fhir/Patient/p1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "p1",
+        "meta": {
+          "profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
+        },
+        "identifier": [
+          {
+            "type": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/v2-0203", "code": "MR", "display": "Medical record number" }] },
+            "system": "http://hospital.example.org/mrn",
+            "value": "MRN-004711"
+          }
+        ],
+        "name": [{ "use": "official", "family": "Muller", "given": ["Anna", "Maria"] }],
+        "gender": "female",
+        "birthDate": "1984-03-12",
+        "address": [{ "line": ["12 Rue de la Gare"], "city": "Esch-sur-Alzette", "postalCode": "4002", "country": "LU" }]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Encounter/e1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "e1",
+        "status": "finished",
+        "class": { "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode", "code": "AMB", "display": "ambulatory" },
+        "subject": { "reference": "Patient/p1" },
+        "period": { "start": "2026-10-27T08:30:00+01:00", "end": "2026-10-27T09:10:00+01:00" }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/o1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "o1",
+        "status": "final",
+        "category": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "vital-signs", "display": "Vital Signs" }] }],
+        "code": { "coding": [{ "system": "http://loinc.org", "code": "8867-4", "display": "Heart rate" }] },
+        "subject": { "reference": "Patient/p1" },
+        "encounter": { "reference": "Encounter/e1" },
+        "effectiveDateTime": "2026-10-27T08:45:00+01:00",
+        "valueQuantity": { "value": 72, "unit": "beats/minute", "system": "http://unitsofmeasure.org", "code": "/min" },
+        "interpretation": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation", "code": "N", "display": "Normal" }] }]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Observation/o2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "o2",
+        "status": "final",
+        "code": { "coding": [{ "system": "http://loinc.org", "code": "85354-9", "display": "Blood pressure panel" }] },
+        "subject": { "reference": "Patient/p1" },
+        "effectiveDateTime": "2026-10-27T08:46:00+01:00",
+        "component": [
+          { "code": { "coding": [{ "system": "http://loinc.org", "code": "8480-6", "display": "Systolic blood pressure" }] }, "valueQuantity": { "value": 128, "unit": "mmHg" } },
+          { "code": { "coding": [{ "system": "http://loinc.org", "code": "8462-4", "display": "Diastolic blood pressure" }] }, "valueQuantity": { "value": 84, "unit": "mmHg" } }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Condition/c1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "c1",
+        "clinicalStatus": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active" }] },
+        "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "38341003", "display": "Hypertensive disorder" }], "text": "Hypertension" },
+        "subject": { "reference": "Patient/p1" },
+        "onsetDateTime": "2024-05-02"
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/MedicationRequest/m1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "m1",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": { "coding": [{ "system": "http://www.nlm.nih.gov/research/umls/rxnorm", "code": "314076", "display": "lisinopril 10 MG Oral Tablet" }] },
+        "subject": { "reference": "Patient/p1" },
+        "authoredOn": "2026-10-27",
+        "requester": { "reference": "https://registry.example.net/fhir/Practitioner/77", "display": "Dr. Weber" },
+        "dosageInstruction": [{ "text": "One tablet daily" }]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/DiagnosticReport/r1",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "r1",
+        "status": "final",
+        "code": { "coding": [{ "system": "http://loinc.org", "code": "85353-1", "display": "Vital signs panel" }] },
+        "subject": { "reference": "Patient/p1" },
+        "effectiveDateTime": "2026-10-27T08:46:00+01:00",
+        "issued": "2026-10-27T10:00:00+01:00",
+        "result": [
+          { "reference": "Observation/o1" },
+          { "reference": "Observation/o2" },
+          { "reference": "Observation/o-missing" }
+        ],
+        "conclusion": "Blood pressure slightly raised."
+      }
+    },
+    {
+      "fullUrl": "http://example.org/fhir/Procedure/pr1",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "pr1",
+        "status": "completed",
+        "code": { "coding": [{ "system": "http://snomed.info/sct", "code": "46973005", "display": "Blood pressure taking" }] },
+        "subject": { "reference": "http://example.org/fhir/Patient/p1" },
+        "performedDateTime": "2026-10-27T08:46:00+01:00"
+      }
+    }
+  ]
+}

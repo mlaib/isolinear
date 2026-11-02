@@ -1,0 +1,34 @@
+[package]
+name = "isolinear-formats"
+description = "Format detection, the view registry and the format readers of Isolinear"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+arrow-array = "=60.1.0"
+arrow-cast = "=60.1.0"
+arrow-ipc = { version = "=60.1.0", default-features = false, features = ["lz4", "zstd"] }
+arrow-schema = "=60.1.0"
+bzip2 = "=0.6.1"
+weezl = "=0.1.12"
+tiff = { version = "=0.11.3", default-features = false, features = ["deflate", "lzw", "jpeg", "fax"] }
+csv = { version = "=1.4.0", default-features = false }
+flate2 = { version = "=1.1.10", default-features = false, features = ["zlib-rs"] }
+hayro = { version = "=0.8.0", default-features = false, features = ["embed-fonts", "embed-cmaps"] }
+isolinear-core = { workspace = true }
+lz4_flex = { version = "=0.14.0", default-features = false, features = ["std", "safe-decode"] }
+lzma-rust2 = { version = "=0.24.0", default-features = false, features = ["std", "xz"] }
+memchr = "2"
+parquet = { version = "=60.1.0", default-features = false, features = ["arrow", "snap", "flate2-zlib-rs", "lz4", "zstd"] }
+pulldown-cmark = { version = "0.13.6", default-features = false, features = ["html"] }
+quick-xml = "=0.41.0"
+serde = { workspace = true }
+serde_json = { workspace = true }
+snap = "=1.1.2"
+zstd = { version = "=0.14.3", default-features = false }
+
+[dev-dependencies]
+lzma-rust2 = { version = "=0.24.0", default-features = false, features = ["std", "xz", "encoder"] }

@@ -1,0 +1,3 @@
+Plain text in UTF-8: café, naïve, 日本語, emoji 😀.
+
+Lines are kept exactly as written, with their line breaks.

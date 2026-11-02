@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>PAY-2026-11-01</MsgId>
+      <CreDtTm>2026-11-01T09:30:00</CreDtTm>
+      <NbOfTxs>2</NbOfTxs>
+      <CtrlSum>1300.00</CtrlSum>
+      <InitgPty><Nm>Example Research S.A.</Nm></InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>BATCH-1</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <ReqdExctnDt><Dt>2026-11-03</Dt></ReqdExctnDt>
+      <Dbtr><Nm>Example Research S.A.</Nm></Dbtr>
+      <DbtrAcct><Id><IBAN>LU280019400644750000</IBAN></Id></DbtrAcct>
+      <DbtrAgt><FinInstnId><BICFI>BCEELULL</BICFI></FinInstnId></DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId><InstrId>I-1</InstrId><EndToEndId>E2E-1</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="EUR">1000.00</InstdAmt></Amt>
+        <CdtrAgt><FinInstnId><BICFI>DEUTDEFF</BICFI></FinInstnId></CdtrAgt>
+        <Cdtr><Nm>Supplier One</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>DE89370400440532013000</IBAN></Id></CdtrAcct>
+        <RmtInf><Ustrd>Invoice A-1</Ustrd></RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId><InstrId>I-2</InstrId><EndToEndId>E2E-2</EndToEndId></PmtId>
+        <Amt><InstdAmt Ccy="EUR">250.00</InstdAmt></Amt>
+        <Cdtr><Nm>Supplier Two</Nm></Cdtr>
+        <CdtrAcct><Id><IBAN>FR1420041010050500013M02606</IBAN></Id></CdtrAcct>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>

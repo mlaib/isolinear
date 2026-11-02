@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Document>
+    <name>Field trip</name>
+    <description>Places to visit</description>
+    <Style id="red"><LineStyle><color>ff0000ff</color></LineStyle></Style>
+    <Folder>
+      <name>Sights</name>
+      <Placemark>
+        <name>Cathedral</name>
+        <description><![CDATA[<p>Gothic <b>cathedral</b> &amp; crypt</p>]]></description>
+        <styleUrl>#red</styleUrl>
+        <Point><coordinates>6.1316,49.6097,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>Corniche</name>
+        <LineString><coordinates>
+          6.135,49.611,0 6.137,49.612,0
+          6.139,49.6125,0
+        </coordinates></LineString>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Areas</name>
+      <Placemark>
+        <name>Park</name>
+        <Polygon>
+          <outerBoundaryIs><LinearRing><coordinates>6.12,49.60 6.13,49.60 6.13,49.61 6.12,49.60</coordinates></LinearRing></outerBoundaryIs>
+          <innerBoundaryIs><LinearRing><coordinates>6.122,49.602 6.124,49.602 6.124,49.604 6.122,49.602</coordinates></LinearRing></innerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>Both sides</name>
+        <MultiGeometry>
+          <Point><coordinates>6.10,49.62</coordinates></Point>
+          <LineString><coordinates>6.10,49.62 6.11,49.63</coordinates></LineString>
+        </MultiGeometry>
+      </Placemark>
+      <Placemark>
+        <name>Fence</name>
+        <LinearRing><coordinates>6.0,49.5 6.01,49.5 6.01,49.51 6.0,49.5</coordinates></LinearRing>
+      </Placemark>
+    </Folder>
+    <Placemark>
+      <name>Bike ride</name>
+      <gx:Track>
+        <when>2026-05-01T08:00:00Z</when>
+        <when>2026-05-01T08:05:00Z</when>
+        <gx:coord>6.13 49.61 300</gx:coord>
+        <gx:coord>6.14 49.62 310</gx:coord>
+      </gx:Track>
+    </Placemark>
+    <NetworkLink>
+      <name>Weather</name>
+      <Link><href>https://example.com/weather.kml</href></Link>
+    </NetworkLink>
+  </Document>
+</kml>

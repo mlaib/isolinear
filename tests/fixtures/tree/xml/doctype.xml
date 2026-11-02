@@ -1,0 +1,2 @@
+<!DOCTYPE r SYSTEM 'https://example.invalid/dtd' [<!ENTITY x 'boom'>]>
+<r xmlns:xi='http://www.w3.org/2001/XInclude'>&x;<xi:include href='file:///missing.xml'/></r>
